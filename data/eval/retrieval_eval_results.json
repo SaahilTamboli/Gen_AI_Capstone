@@ -1,0 +1,53 @@
+{
+  "dataset": "data/eval/labelled_queries.jsonl",
+  "total_labelled_queries": 36,
+  "configurations": {
+    "A_bm25_english_only_baseline": {
+      "num_queries": 36,
+      "recall_at_1": 0.3611,
+      "recall_at_5": 0.6944,
+      "mrr_at_5": 0.4819,
+      "recall_at_5_by_language": {
+        "en": 1.0,
+        "hi": 0.5,
+        "mr": 0.5833
+      }
+    },
+    "B_plus_multilingual_query_rewriting": {
+      "num_queries": 36,
+      "recall_at_1": 0.9722,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.9861,
+      "recall_at_5_by_language": {
+        "en": 1.0,
+        "hi": 1.0,
+        "mr": 1.0
+      }
+    },
+    "C_full_hybrid_bm25_chroma_rrf_reranker": {
+      "num_queries": 36,
+      "recall_at_1": 0.9167,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.9583,
+      "recall_at_5_by_language": {
+        "en": 1.0,
+        "hi": 1.0,
+        "mr": 1.0
+      }
+    }
+  },
+  "flagged_untrusted_sources": [
+    {
+      "policy_id": "SCAM-UPI-FASTTRACK-2026",
+      "source_url": "http://msme-instant-grant-fasttrack.xyz/apply",
+      "reasons": [
+        "untrusted_domain:http://msme-instant-grant-fasttrack.xyz/apply",
+        "suspicious_content:\\bupi\\s*id\\b",
+        "suspicious_content:processing\\s+fee",
+        "suspicious_content:system\\s+instruction\\s*:",
+        "suspicious_content:ignore\\s+(?:all\\s+)?(?:previous|rule[- ]engine)",
+        "suspicious_content:aadhaar\\s+otp"
+      ]
+    }
+  ]
+}

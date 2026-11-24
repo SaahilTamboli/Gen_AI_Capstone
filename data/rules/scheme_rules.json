@@ -1,0 +1,2558 @@
+{
+  "version": "1.0.0",
+  "collection_date": "2026-10-24",
+  "total_rules": 42,
+  "rules": {
+    "MH-PSI-2019-CAP": {
+      "policy_id": "MH-PSI-2019-CAP",
+      "scheme_name": "Maharashtra PSI-2019 Capital Subsidy (Group D/D+)",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-PSI-2019-CAP/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-PSI-2019-CAP/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-PSI-2019-CAP/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-PSI-2019/Ch.4/Cl.4.2(b)",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "taluka_zone",
+          "operator": "in_or_none",
+          "value": [
+            "C",
+            "D",
+            "D+"
+          ],
+          "source_clause": "MH-PSI-2019/Ch.4/Cl.4.2",
+          "failure_reason": "Applicable only to taluka zones ['C', 'D', 'D+']."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "MH-PSI-2019/Ch.4/Cl.4.2(b)",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 30.0,
+        "cap_inr": 3000000,
+        "source_clause": "MH-PSI-2019/Ch.4/Cl.4.2"
+      },
+      "eligible_reason_template": "Qualifies for 30% capital grant/subsidy under Maharashtra PSI-2019 Capital Subsidy (Group D/D+) (capped at Rs. 30.0L)."
+    },
+    "MH-GREEN-SOLAR-2024": {
+      "policy_id": "MH-GREEN-SOLAR-2024",
+      "scheme_name": "Maharashtra MSME Rooftop Solar & Green Tech Grant",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-GREEN-SOLAR-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-GREEN-SOLAR-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-GREEN-SOLAR-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-GREEN-2024/Sec.3/Cl.3.4",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "solar_upgrade_requested",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-GREEN-2024/Sec.3/Cl.3.4",
+          "failure_reason": "Requires rooftop solar or clean/green machinery upgrade."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 250.0,
+          "source_clause": "MH-GREEN-2024/Sec.3/Cl.3.4",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 250.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 25.0,
+        "cap_inr": 1500000,
+        "source_clause": "MH-GREEN-2024/Sec.3/Cl.3.4"
+      },
+      "eligible_reason_template": "Qualifies for 25% capital grant/subsidy under Maharashtra MSME Rooftop Solar & Green Tech Grant (capped at Rs. 15.0L)."
+    },
+    "MH-CMEGP-2024": {
+      "policy_id": "MH-CMEGP-2024",
+      "scheme_name": "Chief Minister Employment Generation Programme (CMEGP Maharashtra)",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-CMEGP-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-CMEGP-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro"
+          ],
+          "source_clause": "MH-CMEGP-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-CMEGP-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "project_type",
+          "operator": "in",
+          "value": [
+            "greenfield"
+          ],
+          "source_clause": "MH-CMEGP-2024/Cl.3.1",
+          "failure_reason": "Restricted to project types: greenfield."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 50.0,
+          "source_clause": "MH-CMEGP-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 50.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 25.0,
+        "cap_inr": 1000000,
+        "source_clause": "MH-CMEGP-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 25% capital grant/subsidy under Chief Minister Employment Generation Programme (CMEGP Maharashtra) (capped at Rs. 10.0L)."
+    },
+    "MH-PSI-INT-2019": {
+      "policy_id": "MH-PSI-INT-2019",
+      "scheme_name": "Maharashtra PSI-2019 Term Loan Interest Subsidy",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-PSI-INT-2019/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-PSI-INT-2019/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-PSI-INT-2019/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-PSI-INT-2019/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "taluka_zone",
+          "operator": "in_or_none",
+          "value": [
+            "C",
+            "D",
+            "D+"
+          ],
+          "source_clause": "MH-PSI-INT-2019/Ch.4/Cl.4.1",
+          "failure_reason": "Applicable only to taluka zones ['C', 'D', 'D+']."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "MH-PSI-INT-2019/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 12.0,
+        "cap_inr": 500000,
+        "source_clause": "MH-PSI-INT-2019/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 12% capital grant/subsidy under Maharashtra PSI-2019 Term Loan Interest Subsidy (capped at Rs. 5.0L)."
+    },
+    "MH-POWER-TARIFF-2023": {
+      "policy_id": "MH-POWER-TARIFF-2023",
+      "scheme_name": "Maharashtra Industrial Power Tariff Reimbursement (Vidarbha & Marathwada)",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-POWER-TARIFF-2023/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-POWER-TARIFF-2023/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-POWER-TARIFF-2023/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-POWER-TARIFF-2023/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "taluka_zone",
+          "operator": "in_or_none",
+          "value": [
+            "D",
+            "D+"
+          ],
+          "source_clause": "MH-POWER-TARIFF-2023/Ch.4/Cl.4.1",
+          "failure_reason": "Applicable only to taluka zones ['D', 'D+']."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "MH-POWER-TARIFF-2023/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 10.0,
+        "cap_inr": 450000,
+        "source_clause": "MH-POWER-TARIFF-2023/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 10% capital grant/subsidy under Maharashtra Industrial Power Tariff Reimbursement (Vidarbha & Marathwada) (capped at Rs. 4.5L)."
+    },
+    "MH-AGRO-PROC-2024": {
+      "policy_id": "MH-AGRO-PROC-2024",
+      "scheme_name": "Maharashtra State Agri & Food Processing Capital Grant",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-AGRO-PROC-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-AGRO-PROC-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "MH-AGRO-PROC-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-AGRO-PROC-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "food_processing",
+            "agro_processing",
+            "cold_chain"
+          ],
+          "source_clause": "MH-AGRO-PROC-2024/Cl.3.1",
+          "failure_reason": "Restricted to sectors: food_processing, agro_processing, cold_chain."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 200.0,
+          "source_clause": "MH-AGRO-PROC-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 200.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 35.0,
+        "cap_inr": 5000000,
+        "source_clause": "MH-AGRO-PROC-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 35% capital grant/subsidy under Maharashtra State Agri & Food Processing Capital Grant (capped at Rs. 50.0L)."
+    },
+    "MH-TEXTILE-2023": {
+      "policy_id": "MH-TEXTILE-2023",
+      "scheme_name": "Maharashtra Integrated & Sustainable Textile Policy Capital Subsidy",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-TEXTILE-2023/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-TEXTILE-2023/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "MH-TEXTILE-2023/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-TEXTILE-2023/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "textiles",
+            "garments",
+            "powerloom",
+            "ginning"
+          ],
+          "source_clause": "MH-TEXTILE-2023/Cl.3.1",
+          "failure_reason": "Restricted to sectors: textiles, garments, powerloom, ginning."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 300.0,
+          "source_clause": "MH-TEXTILE-2023/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 300.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 35.0,
+        "cap_inr": 6000000,
+        "source_clause": "MH-TEXTILE-2023/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 35% capital grant/subsidy under Maharashtra Integrated & Sustainable Textile Policy Capital Subsidy (capped at Rs. 60.0L)."
+    },
+    "MH-EV-AUTO-2025": {
+      "policy_id": "MH-EV-AUTO-2025",
+      "scheme_name": "Maharashtra Electric Vehicle & Auto Component MSME Incentive",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-EV-AUTO-2025/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-EV-AUTO-2025/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "MH-EV-AUTO-2025/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-EV-AUTO-2025/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "ev_components",
+            "auto_ancillary",
+            "battery_pack"
+          ],
+          "source_clause": "MH-EV-AUTO-2025/Cl.3.1",
+          "failure_reason": "Restricted to sectors: ev_components, auto_ancillary, battery_pack."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 500.0,
+          "source_clause": "MH-EV-AUTO-2025/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 500.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 25.0,
+        "cap_inr": 5000000,
+        "source_clause": "MH-EV-AUTO-2025/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 25% capital grant/subsidy under Maharashtra Electric Vehicle & Auto Component MSME Incentive (capped at Rs. 50.0L)."
+    },
+    "MH-IT-ESDM-2023": {
+      "policy_id": "MH-IT-ESDM-2023",
+      "scheme_name": "Maharashtra IT & Electronic System Design Manufacturing (ESDM) Grant",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-IT-ESDM-2023/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-IT-ESDM-2023/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "MH-IT-ESDM-2023/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-IT-ESDM-2023/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "electronics",
+            "esdm",
+            "pcb_assembly",
+            "iot_hardware"
+          ],
+          "source_clause": "MH-IT-ESDM-2023/Cl.3.1",
+          "failure_reason": "Restricted to sectors: electronics, esdm, pcb_assembly, iot_hardware."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 400.0,
+          "source_clause": "MH-IT-ESDM-2023/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 400.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 25.0,
+        "cap_inr": 4500000,
+        "source_clause": "MH-IT-ESDM-2023/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 25% capital grant/subsidy under Maharashtra IT & Electronic System Design Manufacturing (ESDM) Grant (capped at Rs. 45.0L)."
+    },
+    "MH-WOMEN-IND-2023": {
+      "policy_id": "MH-WOMEN-IND-2023",
+      "scheme_name": "Maharashtra Mahila Udyojak Special Capital Grant (Aai / Women MSME Policy)",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-WOMEN-IND-2023/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-WOMEN-IND-2023/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-WOMEN-IND-2023/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-WOMEN-IND-2023/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "women_led_manufacturing",
+            "garments",
+            "food_processing",
+            "handicrafts"
+          ],
+          "source_clause": "MH-WOMEN-IND-2023/Cl.3.1",
+          "failure_reason": "Restricted to sectors: women_led_manufacturing, garments, food_processing, handicrafts."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "MH-WOMEN-IND-2023/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 35.0,
+        "cap_inr": 2500000,
+        "source_clause": "MH-WOMEN-IND-2023/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 35% capital grant/subsidy under Maharashtra Mahila Udyojak Special Capital Grant (Aai / Women MSME Policy) (capped at Rs. 25.0L)."
+    },
+    "MH-SCST-SPL-2019": {
+      "policy_id": "MH-SCST-SPL-2019",
+      "scheme_name": "Dr. Babasaheb Ambedkar Special Package for SC/ST Entrepreneurs (Maharashtra)",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-SCST-SPL-2019/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-SCST-SPL-2019/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-SCST-SPL-2019/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-SCST-SPL-2019/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "sc_st_owned_manufacturing"
+          ],
+          "source_clause": "MH-SCST-SPL-2019/Cl.3.1",
+          "failure_reason": "Restricted to sectors: sc_st_owned_manufacturing."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "MH-SCST-SPL-2019/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 30.0,
+        "cap_inr": 3000000,
+        "source_clause": "MH-SCST-SPL-2019/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 30% capital grant/subsidy under Dr. Babasaheb Ambedkar Special Package for SC/ST Entrepreneurs (Maharashtra) (capped at Rs. 30.0L)."
+    },
+    "MH-ZLD-ETP-2024": {
+      "policy_id": "MH-ZLD-ETP-2024",
+      "scheme_name": "Maharashtra MSME Effluent Treatment & Zero Liquid Discharge (ZLD) Subsidy",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-ZLD-ETP-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-ZLD-ETP-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "MH-ZLD-ETP-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-ZLD-ETP-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "chemicals",
+            "pharmaceuticals",
+            "dyeing",
+            "electroplating"
+          ],
+          "source_clause": "MH-ZLD-ETP-2024/Cl.3.1",
+          "failure_reason": "Restricted to sectors: chemicals, pharmaceuticals, dyeing, electroplating."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 250.0,
+          "source_clause": "MH-ZLD-ETP-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 250.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 50.0,
+        "cap_inr": 2500000,
+        "source_clause": "MH-ZLD-ETP-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 50% capital grant/subsidy under Maharashtra MSME Effluent Treatment & Zero Liquid Discharge (ZLD) Subsidy (capped at Rs. 25.0L)."
+    },
+    "MH-STAMP-DUTY-2019": {
+      "policy_id": "MH-STAMP-DUTY-2019",
+      "scheme_name": "Maharashtra PSI-2019 100% Stamp Duty Exemption for Industrial Land",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-STAMP-DUTY-2019/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-STAMP-DUTY-2019/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-STAMP-DUTY-2019/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-STAMP-DUTY-2019/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "taluka_zone",
+          "operator": "in_or_none",
+          "value": [
+            "C",
+            "D",
+            "D+"
+          ],
+          "source_clause": "MH-STAMP-DUTY-2019/Ch.4/Cl.4.1",
+          "failure_reason": "Applicable only to taluka zones ['C', 'D', 'D+']."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "MH-STAMP-DUTY-2019/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 5.0,
+        "cap_inr": 350000,
+        "source_clause": "MH-STAMP-DUTY-2019/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 5% capital grant/subsidy under Maharashtra PSI-2019 100% Stamp Duty Exemption for Industrial Land (capped at Rs. 3.5L)."
+    },
+    "MH-QUALITY-ISO-2024": {
+      "policy_id": "MH-QUALITY-ISO-2024",
+      "scheme_name": "Maharashtra MSME Quality Certification (BIS / ISO / CE / IATF) Reimbursement",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-QUALITY-ISO-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-QUALITY-ISO-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-QUALITY-ISO-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-QUALITY-ISO-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "MH-QUALITY-ISO-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 4.0,
+        "cap_inr": 200000,
+        "source_clause": "MH-QUALITY-ISO-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 4% capital grant/subsidy under Maharashtra MSME Quality Certification (BIS / ISO / CE / IATF) Reimbursement (capped at Rs. 2.0L)."
+    },
+    "MH-DEF-AERO-2024": {
+      "policy_id": "MH-DEF-AERO-2024",
+      "scheme_name": "Maharashtra Defense & Aerospace MSME Vendor Development Grant",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-DEF-AERO-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-DEF-AERO-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "MH-DEF-AERO-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-DEF-AERO-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "defense_manufacturing",
+            "aerospace",
+            "uav_drones"
+          ],
+          "source_clause": "MH-DEF-AERO-2024/Cl.3.1",
+          "failure_reason": "Restricted to sectors: defense_manufacturing, aerospace, uav_drones."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 500.0,
+          "source_clause": "MH-DEF-AERO-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 500.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 30.0,
+        "cap_inr": 7500000,
+        "source_clause": "MH-DEF-AERO-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 30% capital grant/subsidy under Maharashtra Defense & Aerospace MSME Vendor Development Grant (capped at Rs. 75.0L)."
+    },
+    "MH-PHARMA-GMP-2024": {
+      "policy_id": "MH-PHARMA-GMP-2024",
+      "scheme_name": "Maharashtra WHO-GMP Upgradation Grant for Pharma & Medical Device MSMEs",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-PHARMA-GMP-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-PHARMA-GMP-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "MH-PHARMA-GMP-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-PHARMA-GMP-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "pharmaceuticals",
+            "medical_devices",
+            "bulk_drugs"
+          ],
+          "source_clause": "MH-PHARMA-GMP-2024/Cl.3.1",
+          "failure_reason": "Restricted to sectors: pharmaceuticals, medical_devices, bulk_drugs."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 350.0,
+          "source_clause": "MH-PHARMA-GMP-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 350.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 25.0,
+        "cap_inr": 4000000,
+        "source_clause": "MH-PHARMA-GMP-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 25% capital grant/subsidy under Maharashtra WHO-GMP Upgradation Grant for Pharma & Medical Device MSMEs (capped at Rs. 40.0L)."
+    },
+    "MH-EXPORT-PROMO-2024": {
+      "policy_id": "MH-EXPORT-PROMO-2024",
+      "scheme_name": "Maharashtra MSME Export Promotion & International Fair Grant",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-EXPORT-PROMO-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-EXPORT-PROMO-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-EXPORT-PROMO-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-EXPORT-PROMO-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "export_manufacturing",
+            "engineering_exports",
+            "handicrafts"
+          ],
+          "source_clause": "MH-EXPORT-PROMO-2024/Cl.3.1",
+          "failure_reason": "Restricted to sectors: export_manufacturing, engineering_exports, handicrafts."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 150.0,
+          "source_clause": "MH-EXPORT-PROMO-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 150.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 15.0,
+        "cap_inr": 600000,
+        "source_clause": "MH-EXPORT-PROMO-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 15% capital grant/subsidy under Maharashtra MSME Export Promotion & International Fair Grant (capped at Rs. 6.0L)."
+    },
+    "MH-CIRCULAR-PLAST-2024": {
+      "policy_id": "MH-CIRCULAR-PLAST-2024",
+      "scheme_name": "Maharashtra Circular Economy & Biodegradable Packaging MSME Grant",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-CIRCULAR-PLAST-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-CIRCULAR-PLAST-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-CIRCULAR-PLAST-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-CIRCULAR-PLAST-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "packaging",
+            "recycling",
+            "biopolymers"
+          ],
+          "source_clause": "MH-CIRCULAR-PLAST-2024/Cl.3.1",
+          "failure_reason": "Restricted to sectors: packaging, recycling, biopolymers."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 120.0,
+          "source_clause": "MH-CIRCULAR-PLAST-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 120.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 30.0,
+        "cap_inr": 2000000,
+        "source_clause": "MH-CIRCULAR-PLAST-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 30% capital grant/subsidy under Maharashtra Circular Economy & Biodegradable Packaging MSME Grant (capped at Rs. 20.0L)."
+    },
+    "MH-MSI-CDP-2024": {
+      "policy_id": "MH-MSI-CDP-2024",
+      "scheme_name": "Maharashtra State Industrial Cluster Development Programme (MSI-CDP)",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-MSI-CDP-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-MSI-CDP-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-MSI-CDP-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-MSI-CDP-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "cluster_spv",
+            "foundry",
+            "forging"
+          ],
+          "source_clause": "MH-MSI-CDP-2024/Cl.3.1",
+          "failure_reason": "Restricted to sectors: cluster_spv, foundry, forging."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 200.0,
+          "source_clause": "MH-MSI-CDP-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 200.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 40.0,
+        "cap_inr": 8000000,
+        "source_clause": "MH-MSI-CDP-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 40% capital grant/subsidy under Maharashtra State Industrial Cluster Development Programme (MSI-CDP) (capped at Rs. 80.0L)."
+    },
+    "MH-BAMBOO-FURN-2024": {
+      "policy_id": "MH-BAMBOO-FURN-2024",
+      "scheme_name": "Maharashtra Bamboo & Engineered Wood Processing MSME Subsidy",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-BAMBOO-FURN-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-BAMBOO-FURN-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-BAMBOO-FURN-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-BAMBOO-FURN-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "woodworking",
+            "bamboo_processing",
+            "furniture"
+          ],
+          "source_clause": "MH-BAMBOO-FURN-2024/Cl.3.1",
+          "failure_reason": "Restricted to sectors: woodworking, bamboo_processing, furniture."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 80.0,
+          "source_clause": "MH-BAMBOO-FURN-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 80.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 35.0,
+        "cap_inr": 2000000,
+        "source_clause": "MH-BAMBOO-FURN-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 35% capital grant/subsidy under Maharashtra Bamboo & Engineered Wood Processing MSME Subsidy (capped at Rs. 20.0L)."
+    },
+    "MH-ENERGY-AUDIT-2024": {
+      "policy_id": "MH-ENERGY-AUDIT-2024",
+      "scheme_name": "Maharashtra MEDA Industrial Energy Conservation & Boiler Retrofit Subsidy",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-ENERGY-AUDIT-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-ENERGY-AUDIT-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-ENERGY-AUDIT-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-ENERGY-AUDIT-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "solar_upgrade_requested",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-ENERGY-AUDIT-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Requires rooftop solar or clean/green machinery upgrade."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "MH-ENERGY-AUDIT-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 15.0,
+        "cap_inr": 500000,
+        "source_clause": "MH-ENERGY-AUDIT-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 15% capital grant/subsidy under Maharashtra MEDA Industrial Energy Conservation & Boiler Retrofit Subsidy (capped at Rs. 5.0L)."
+    },
+    "MH-IPR-PATENT-2023": {
+      "policy_id": "MH-IPR-PATENT-2023",
+      "scheme_name": "Maharashtra MSME Patent, Trademark & Geographical Indication Grant",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "MH-IPR-PATENT-2023/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "MH-IPR-PATENT-2023/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "MH-IPR-PATENT-2023/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "state",
+          "operator": "==",
+          "value": "Maharashtra",
+          "source_clause": "MH-IPR-PATENT-2023/Ch.4/Cl.4.1",
+          "failure_reason": "Unit must be located in Maharashtra."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "MH-IPR-PATENT-2023/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 3.0,
+        "cap_inr": 150000,
+        "source_clause": "MH-IPR-PATENT-2023/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 3% capital grant/subsidy under Maharashtra MSME Patent, Trademark & Geographical Indication Grant (capped at Rs. 1.5L)."
+    },
+    "CENT-CLCSS-TUS": {
+      "policy_id": "CENT-CLCSS-TUS",
+      "scheme_name": "Central CLCSS Technology Upgradation Subsidy",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-CLCSS-TUS/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-CLCSS-TUS/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "CENT-CLCSS-TUS/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "CLCSS-TUS/Para.5.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 15.0,
+        "cap_inr": 1500000,
+        "source_clause": "CLCSS-TUS/Para.5.1"
+      },
+      "eligible_reason_template": "Qualifies for 15% capital grant/subsidy under Central CLCSS Technology Upgradation Subsidy (capped at Rs. 15.0L)."
+    },
+    "CENT-PMEGP-2024": {
+      "policy_id": "CENT-PMEGP-2024",
+      "scheme_name": "Prime Minister's Employment Generation Programme (PMEGP)",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-PMEGP-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-PMEGP-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro"
+          ],
+          "source_clause": "CENT-PMEGP-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro']."
+        },
+        {
+          "field": "project_type",
+          "operator": "in",
+          "value": [
+            "greenfield"
+          ],
+          "source_clause": "CENT-PMEGP-2024/Cl.3.1",
+          "failure_reason": "Restricted to project types: greenfield."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 50.0,
+          "source_clause": "CENT-PMEGP-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 50.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 25.0,
+        "cap_inr": 1250000,
+        "source_clause": "CENT-PMEGP-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 25% capital grant/subsidy under Prime Minister's Employment Generation Programme (PMEGP) (capped at Rs. 12.5L)."
+    },
+    "CENT-CGTMSE-2024": {
+      "policy_id": "CENT-CGTMSE-2024",
+      "scheme_name": "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE)",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-CGTMSE-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-CGTMSE-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "CENT-CGTMSE-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 200.0,
+          "source_clause": "CENT-CGTMSE-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 200.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 8.0,
+        "cap_inr": 400000,
+        "source_clause": "CENT-CGTMSE-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 8% capital grant/subsidy under Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) (capped at Rs. 4.0L)."
+    },
+    "CENT-MSME-ZED-2024": {
+      "policy_id": "CENT-MSME-ZED-2024",
+      "scheme_name": "MSME Sustainable (ZED — Zero Defect Zero Effect) Certification Subsidy",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-MSME-ZED-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-MSME-ZED-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "CENT-MSME-ZED-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 250.0,
+          "source_clause": "CENT-MSME-ZED-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 250.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 5.0,
+        "cap_inr": 500000,
+        "source_clause": "CENT-MSME-ZED-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 5% capital grant/subsidy under MSME Sustainable (ZED — Zero Defect Zero Effect) Certification Subsidy (capped at Rs. 5.0L)."
+    },
+    "CENT-MSME-LEAN-2024": {
+      "policy_id": "CENT-MSME-LEAN-2024",
+      "scheme_name": "MSME Competitive (LEAN) Manufacturing Consultancy Grant",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-MSME-LEAN-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-MSME-LEAN-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "CENT-MSME-LEAN-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 250.0,
+          "source_clause": "CENT-MSME-LEAN-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 250.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 4.0,
+        "cap_inr": 324000,
+        "source_clause": "CENT-MSME-LEAN-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 4% capital grant/subsidy under MSME Competitive (LEAN) Manufacturing Consultancy Grant (capped at Rs. 3.2L)."
+    },
+    "CENT-PMFME-2024": {
+      "policy_id": "CENT-PMFME-2024",
+      "scheme_name": "PM Formalisation of Micro Food Processing Enterprises (PMFME)",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-PMFME-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-PMFME-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro"
+          ],
+          "source_clause": "CENT-PMFME-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "food_processing",
+            "agro_processing",
+            "dairy",
+            "bakery",
+            "spices"
+          ],
+          "source_clause": "CENT-PMFME-2024/Cl.3.1",
+          "failure_reason": "Restricted to sectors: food_processing, agro_processing, dairy, bakery, spices."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "CENT-PMFME-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 35.0,
+        "cap_inr": 1000000,
+        "source_clause": "CENT-PMFME-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 35% capital grant/subsidy under PM Formalisation of Micro Food Processing Enterprises (PMFME) (capped at Rs. 10.0L)."
+    },
+    "CENT-PM-VISHWAKARMA": {
+      "policy_id": "CENT-PM-VISHWAKARMA",
+      "scheme_name": "PM Vishwakarma Artisan & Craft Enterprise Toolkit + Credit Support",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-PM-VISHWAKARMA/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-PM-VISHWAKARMA/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro"
+          ],
+          "source_clause": "CENT-PM-VISHWAKARMA/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "traditional_crafts",
+            "carpentry",
+            "blacksmithy",
+            "pottery",
+            "tailoring"
+          ],
+          "source_clause": "CENT-PM-VISHWAKARMA/Cl.3.1",
+          "failure_reason": "Restricted to sectors: traditional_crafts, carpentry, blacksmithy, pottery, tailoring."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 10.0,
+          "source_clause": "CENT-PM-VISHWAKARMA/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 10.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 20.0,
+        "cap_inr": 100000,
+        "source_clause": "CENT-PM-VISHWAKARMA/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 20% capital grant/subsidy under PM Vishwakarma Artisan & Craft Enterprise Toolkit + Credit Support (capped at Rs. 1.0L)."
+    },
+    "CENT-STANDUP-INDIA": {
+      "policy_id": "CENT-STANDUP-INDIA",
+      "scheme_name": "Stand-Up India Greenfield Enterprise Credit & Margin Support",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-STANDUP-INDIA/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-STANDUP-INDIA/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "CENT-STANDUP-INDIA/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "women_led_manufacturing",
+            "sc_st_owned_manufacturing"
+          ],
+          "source_clause": "CENT-STANDUP-INDIA/Cl.3.1",
+          "failure_reason": "Restricted to sectors: women_led_manufacturing, sc_st_owned_manufacturing."
+        },
+        {
+          "field": "project_type",
+          "operator": "in",
+          "value": [
+            "greenfield"
+          ],
+          "source_clause": "CENT-STANDUP-INDIA/Cl.3.1",
+          "failure_reason": "Restricted to project types: greenfield."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": ">=",
+          "value": 10.0,
+          "source_clause": "CENT-STANDUP-INDIA/Ch.4/Cl.4.1",
+          "failure_reason": "Minimum plant & machinery investment is Rs. 10.0L."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "CENT-STANDUP-INDIA/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 15.0,
+        "cap_inr": 1500000,
+        "source_clause": "CENT-STANDUP-INDIA/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 15% capital grant/subsidy under Stand-Up India Greenfield Enterprise Credit & Margin Support (capped at Rs. 15.0L)."
+    },
+    "CENT-SIDBI-GREEN-4E": {
+      "policy_id": "CENT-SIDBI-GREEN-4E",
+      "scheme_name": "SIDBI 4E / GIFT Green & Rooftop Solar Interest + Capital Subvention",
+      "gold_standard": true,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-SIDBI-GREEN-4E/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-SIDBI-GREEN-4E/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "CENT-SIDBI-GREEN-4E/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "solar_upgrade_requested",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-SIDBI-GREEN-4E/Ch.4/Cl.4.1",
+          "failure_reason": "Requires rooftop solar or clean/green machinery upgrade."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 200.0,
+          "source_clause": "CENT-SIDBI-GREEN-4E/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 200.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 12.0,
+        "cap_inr": 750000,
+        "source_clause": "CENT-SIDBI-GREEN-4E/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 12% capital grant/subsidy under SIDBI 4E / GIFT Green & Rooftop Solar Interest + Capital Subvention (capped at Rs. 7.5L)."
+    },
+    "CENT-MSME-DESIGN-2024": {
+      "policy_id": "CENT-MSME-DESIGN-2024",
+      "scheme_name": "MSME Innovative (Design) Industrial Product Prototyping Grant",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-MSME-DESIGN-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-MSME-DESIGN-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "CENT-MSME-DESIGN-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "product_design",
+            "industrial_machinery",
+            "consumer_goods"
+          ],
+          "source_clause": "CENT-MSME-DESIGN-2024/Cl.3.1",
+          "failure_reason": "Restricted to sectors: product_design, industrial_machinery, consumer_goods."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 200.0,
+          "source_clause": "CENT-MSME-DESIGN-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 200.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 75.0,
+        "cap_inr": 400000,
+        "source_clause": "CENT-MSME-DESIGN-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 75% capital grant/subsidy under MSME Innovative (Design) Industrial Product Prototyping Grant (capped at Rs. 4.0L)."
+    },
+    "CENT-MSME-INCUBATION": {
+      "policy_id": "CENT-MSME-INCUBATION",
+      "scheme_name": "MSME Innovative (Incubation) Idea-to-Prototype Grant",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-MSME-INCUBATION/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-MSME-INCUBATION/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "CENT-MSME-INCUBATION/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "deep_tech_msme",
+            "iot_hardware",
+            "biotech",
+            "clean_tech"
+          ],
+          "source_clause": "CENT-MSME-INCUBATION/Cl.3.1",
+          "failure_reason": "Restricted to sectors: deep_tech_msme, iot_hardware, biotech, clean_tech."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "CENT-MSME-INCUBATION/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 85.0,
+        "cap_inr": 1500000,
+        "source_clause": "CENT-MSME-INCUBATION/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 85% capital grant/subsidy under MSME Innovative (Incubation) Idea-to-Prototype Grant (capped at Rs. 15.0L)."
+    },
+    "CENT-NSSH-SCST-CLCS": {
+      "policy_id": "CENT-NSSH-SCST-CLCS",
+      "scheme_name": "National SC-ST Hub Special Credit Linked Capital Subsidy (25% NSSH)",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-NSSH-SCST-CLCS/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-NSSH-SCST-CLCS/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "CENT-NSSH-SCST-CLCS/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "sc_st_owned_manufacturing"
+          ],
+          "source_clause": "CENT-NSSH-SCST-CLCS/Cl.3.1",
+          "failure_reason": "Restricted to sectors: sc_st_owned_manufacturing."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "CENT-NSSH-SCST-CLCS/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 25.0,
+        "cap_inr": 2500000,
+        "source_clause": "CENT-NSSH-SCST-CLCS/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 25% capital grant/subsidy under National SC-ST Hub Special Credit Linked Capital Subsidy (25% NSSH) (capped at Rs. 25.0L)."
+    },
+    "CENT-SFURTI-CLUSTER": {
+      "policy_id": "CENT-SFURTI-CLUSTER",
+      "scheme_name": "Scheme of Fund for Regeneration of Traditional Industries (SFURTI)",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-SFURTI-CLUSTER/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-SFURTI-CLUSTER/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro"
+          ],
+          "source_clause": "CENT-SFURTI-CLUSTER/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "traditional_crafts",
+            "handloom",
+            "khadi",
+            "honey_beekeeping",
+            "bamboo_processing"
+          ],
+          "source_clause": "CENT-SFURTI-CLUSTER/Cl.3.1",
+          "failure_reason": "Restricted to sectors: traditional_crafts, handloom, khadi, honey_beekeeping, bamboo_processing."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 150.0,
+          "source_clause": "CENT-SFURTI-CLUSTER/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 150.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 90.0,
+        "cap_inr": 2500000,
+        "source_clause": "CENT-SFURTI-CLUSTER/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 90% capital grant/subsidy under Scheme of Fund for Regeneration of Traditional Industries (SFURTI) (capped at Rs. 25.0L)."
+    },
+    "CENT-COIR-UDYAMI": {
+      "policy_id": "CENT-COIR-UDYAMI",
+      "scheme_name": "Coir Vikas Yojana — Coir Udyami Capital Subsidy",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-COIR-UDYAMI/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-COIR-UDYAMI/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro"
+          ],
+          "source_clause": "CENT-COIR-UDYAMI/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "coir_fiber"
+          ],
+          "source_clause": "CENT-COIR-UDYAMI/Cl.3.1",
+          "failure_reason": "Restricted to sectors: coir_fiber."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 10.0,
+          "source_clause": "CENT-COIR-UDYAMI/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 10.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 40.0,
+        "cap_inr": 400000,
+        "source_clause": "CENT-COIR-UDYAMI/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 40% capital grant/subsidy under Coir Vikas Yojana — Coir Udyami Capital Subsidy (capped at Rs. 4.0L)."
+    },
+    "CENT-MSME-IC-EXPORT": {
+      "policy_id": "CENT-MSME-IC-EXPORT",
+      "scheme_name": "Ministry of MSME International Cooperation (IC) Export Market Grant",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-MSME-IC-EXPORT/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-MSME-IC-EXPORT/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "CENT-MSME-IC-EXPORT/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "export_manufacturing",
+            "engineering_exports"
+          ],
+          "source_clause": "CENT-MSME-IC-EXPORT/Cl.3.1",
+          "failure_reason": "Restricted to sectors: export_manufacturing, engineering_exports."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 150.0,
+          "source_clause": "CENT-MSME-IC-EXPORT/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 150.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 12.0,
+        "cap_inr": 500000,
+        "source_clause": "CENT-MSME-IC-EXPORT/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 12% capital grant/subsidy under Ministry of MSME International Cooperation (IC) Export Market Grant (capped at Rs. 5.0L)."
+    },
+    "CENT-ASPIRE-AGRO": {
+      "policy_id": "CENT-ASPIRE-AGRO",
+      "scheme_name": "ASPIRE — Scheme for Promotion of Innovation, Rural Industries & Entrepreneurship",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-ASPIRE-AGRO/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-ASPIRE-AGRO/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "CENT-ASPIRE-AGRO/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "agro_processing",
+            "rural_tech"
+          ],
+          "source_clause": "CENT-ASPIRE-AGRO/Cl.3.1",
+          "failure_reason": "Restricted to sectors: agro_processing, rural_tech."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "CENT-ASPIRE-AGRO/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 50.0,
+        "cap_inr": 2000000,
+        "source_clause": "CENT-ASPIRE-AGRO/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 50% capital grant/subsidy under ASPIRE — Scheme for Promotion of Innovation, Rural Industries & Entrepreneurship (capped at Rs. 20.0L)."
+    },
+    "CENT-PMS-BARCODE": {
+      "policy_id": "CENT-PMS-BARCODE",
+      "scheme_name": "MSME Procurement & Marketing Support (PMS) — Barcode, GeM & Packaging Grant",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-PMS-BARCODE/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-PMS-BARCODE/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "CENT-PMS-BARCODE/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "CENT-PMS-BARCODE/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 3.0,
+        "cap_inr": 150000,
+        "source_clause": "CENT-PMS-BARCODE/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 3% capital grant/subsidy under MSME Procurement & Marketing Support (PMS) — Barcode, GeM & Packaging Grant (capped at Rs. 1.5L)."
+    },
+    "CENT-MEDTECH-MDMS": {
+      "policy_id": "CENT-MEDTECH-MDMS",
+      "scheme_name": "Strengthening of Medical Device Industry (MDA) — Marginal Investment MSME Scheme",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-MEDTECH-MDMS/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-MEDTECH-MDMS/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "CENT-MEDTECH-MDMS/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "medical_devices",
+            "diagnostics"
+          ],
+          "source_clause": "CENT-MEDTECH-MDMS/Cl.3.1",
+          "failure_reason": "Restricted to sectors: medical_devices, diagnostics."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 300.0,
+          "source_clause": "CENT-MEDTECH-MDMS/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 300.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 20.0,
+        "cap_inr": 5000000,
+        "source_clause": "CENT-MEDTECH-MDMS/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 20% capital grant/subsidy under Strengthening of Medical Device Industry (MDA) — Marginal Investment MSME Scheme (capped at Rs. 50.0L)."
+    },
+    "CENT-TREDS-WC-2024": {
+      "policy_id": "CENT-TREDS-WC-2024",
+      "scheme_name": "Central TReDS Bill Discounting & Working Capital Fee Waiver",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-TREDS-WC-2024/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-TREDS-WC-2024/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small"
+          ],
+          "source_clause": "CENT-TREDS-WC-2024/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small']."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 100.0,
+          "source_clause": "CENT-TREDS-WC-2024/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 100.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 2.0,
+        "cap_inr": 100000,
+        "source_clause": "CENT-TREDS-WC-2024/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 2% capital grant/subsidy under Central TReDS Bill Discounting & Working Capital Fee Waiver (capped at Rs. 1.0L)."
+    },
+    "CENT-AHIDF-DAIRY": {
+      "policy_id": "CENT-AHIDF-DAIRY",
+      "scheme_name": "Animal Husbandry Infrastructure Development Fund (AHIDF) — Dairy & Feed MSME",
+      "gold_standard": false,
+      "human_reviewed": true,
+      "reviewed_by": "Tanmay (Knowledge, Memory & Tools Engineer)",
+      "review_date": "2026-10-24",
+      "required_fields": [
+        "udyam_registered",
+        "enterprise_scale",
+        "commercial_production_date"
+      ],
+      "missing_field_clause": "CENT-AHIDF-DAIRY/Eligibility",
+      "conditions": [
+        {
+          "field": "udyam_registered",
+          "operator": "==",
+          "value": true,
+          "source_clause": "CENT-AHIDF-DAIRY/Cl.3.1",
+          "failure_reason": "Requires Udyam-registered MSME unit."
+        },
+        {
+          "field": "enterprise_scale",
+          "operator": "in",
+          "value": [
+            "micro",
+            "small",
+            "medium"
+          ],
+          "source_clause": "CENT-AHIDF-DAIRY/Cl.3.1",
+          "failure_reason": "Requires enterprise scale in ['micro', 'small', 'medium']."
+        },
+        {
+          "field": "sector",
+          "operator": "in",
+          "value": [
+            "dairy",
+            "cattle_feed",
+            "agro_processing"
+          ],
+          "source_clause": "CENT-AHIDF-DAIRY/Cl.3.1",
+          "failure_reason": "Restricted to sectors: dairy, cattle_feed, agro_processing."
+        },
+        {
+          "field": "plant_machinery_investment_lakhs",
+          "operator": "<=",
+          "value": 250.0,
+          "source_clause": "CENT-AHIDF-DAIRY/Ch.4/Cl.4.1",
+          "failure_reason": "Plant & machinery investment exceeds Rs. 250.0L cap."
+        }
+      ],
+      "subsidy_formula": {
+        "type": "percentage_of_investment_lakhs_with_cap",
+        "investment_field": "plant_machinery_investment_lakhs",
+        "rate_pct": 18.0,
+        "cap_inr": 3500000,
+        "source_clause": "CENT-AHIDF-DAIRY/Ch.4/Cl.4.1"
+      },
+      "eligible_reason_template": "Qualifies for 18% capital grant/subsidy under Animal Husbandry Infrastructure Development Fund (AHIDF) — Dairy & Feed MSME (capped at Rs. 35.0L)."
+    }
+  }
+}

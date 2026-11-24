@@ -10,8 +10,10 @@ venv/
 .env
 .env.*
 
-# Local runtime databases / checkpoints
+# Local runtime databases / checkpoints / ephemeral vector dirs
 data/*.sqlite
+data/chroma/
+.chroma/
 *.sqlite
 *.db
 

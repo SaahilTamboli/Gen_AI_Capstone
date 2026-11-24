@@ -1,0 +1,3285 @@
+{
+  "collection_date": "2026-10-24",
+  "total_schemes": 42,
+  "schemes": [
+    {
+      "policy_id": "MH-PSI-2019-CAP",
+      "scheme_name": "Maharashtra PSI-2019 Capital Subsidy (Group D/D+)",
+      "authority": "Directorate of Industries, Govt. of Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://di.maharashtra.gov.in/psi-2019-guidelines",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "MH-PSI-2019/Ch.4/Cl.4.2",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "ca_investment_cert",
+        "machinery_invoices",
+        "electricity_sanction_letter"
+      ],
+      "snippet": "30% capital subsidy (up to Rs. 30L) for Udyam Micro/Small units <= Rs. 100L in Zone D/D+.",
+      "keywords": {
+        "en": [
+          "psi 2019",
+          "capital subsidy",
+          "maharashtra",
+          "akola",
+          "vidarbha",
+          "zone d+",
+          "precision engineering",
+          "machinery"
+        ],
+        "hi": [
+          "महाराष्ट्र पूंजी सब्सिडी",
+          "पीएसआई 2019",
+          "अकोला",
+          "मशीनरी अनुदान",
+          "सूक्ष्म लघु उद्योग"
+        ],
+        "mr": [
+          "महाराष्ट्र भांडवली अनुदान",
+          "पीएसआय २०१९",
+          "अकोला",
+          "प्रिसिजन इंजिनिअरिंग",
+          "यंत्रसामग्री गुंतवणूक"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-PSI-2019-CAP/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra PSI-2019 Capital Subsidy (Group D/D+) — Unit Eligibility",
+          "text": "Open to Udyam-registered Micro and Small manufacturing enterprises located in Maharashtra Group C, D, or D+ talukas with fixed capital investment in plant and machinery up to Rs. 100 Lakhs."
+        },
+        {
+          "clause_id": "MH-PSI-2019-CAP/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra PSI-2019 Capital Subsidy (Group D/D+) — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Package Scheme of Incentives (PSI-2019) encourages industrial dispersal into Vidarbha, Marathwada, and Group D/D+ talukas including Akola, Washim, Amravati, and Yavatmal."
+        },
+        {
+          "clause_id": "MH-PSI-2019/Ch.4/Cl.4.2",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra PSI-2019 Capital Subsidy (Group D/D+) — Capital Grant / Subsidy Rate",
+          "text": "30% capital subsidy (up to Rs. 30L) for Udyam Micro/Small units <= Rs. 100L in Zone D/D+."
+        },
+        {
+          "clause_id": "MH-PSI-2019-CAP/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra PSI-2019 Capital Subsidy (Group D/D+) — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra PSI-2019 Capital Subsidy (Group D/D+) must furnish: udyam_certificate, gstin_certificate, ca_investment_cert, machinery_invoices, electricity_sanction_letter. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-GREEN-SOLAR-2024",
+      "scheme_name": "Maharashtra MSME Rooftop Solar & Green Tech Grant",
+      "authority": "MEDA & Directorate of Industries, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://www.mahaurja.com/meda/msme-rooftop-solar-2024",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-GREEN-2024/Sec.3/Cl.3.4",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": true,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "solar_vendor_quotation"
+      ],
+      "snippet": "25% capital subsidy (up to Rs. 15L) for solar & green machinery upgrades.",
+      "keywords": {
+        "en": [
+          "rooftop solar",
+          "green tech",
+          "solar panels",
+          "maharashtra solar grant",
+          "meda",
+          "clean energy"
+        ],
+        "hi": [
+          "रूफटॉप सोलर सब्सिडी",
+          "सौर पैनल अनुदान",
+          "हरित ऊर्जा महाराष्ट्र",
+          "सोलर प्लांट"
+        ],
+        "mr": [
+          "सोलर पॅनेल्स अनुदान",
+          "रूफटॉप सोलर",
+          "हरित तंत्रज्ञान महाराष्ट्र",
+          "सौर ऊर्जा"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-GREEN-SOLAR-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra MSME Rooftop Solar & Green Tech Grant — Unit Eligibility",
+          "text": "Available to Udyam-registered Micro and Small units in Maharashtra adopting rooftop solar panels or green manufacturing upgrades with total plant & machinery up to Rs. 250 Lakhs."
+        },
+        {
+          "clause_id": "MH-GREEN-SOLAR-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra MSME Rooftop Solar & Green Tech Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Supports captive rooftop solar PV plants and energy-efficient clean manufacturing equipment for MSME industrial sheds across Maharashtra."
+        },
+        {
+          "clause_id": "MH-GREEN-2024/Sec.3/Cl.3.4",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra MSME Rooftop Solar & Green Tech Grant — Capital Grant / Subsidy Rate",
+          "text": "25% capital subsidy (up to Rs. 15L) for solar & green machinery upgrades."
+        },
+        {
+          "clause_id": "MH-GREEN-SOLAR-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra MSME Rooftop Solar & Green Tech Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra MSME Rooftop Solar & Green Tech Grant must furnish: udyam_certificate, gstin_certificate, solar_vendor_quotation. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-CMEGP-2024",
+      "scheme_name": "Chief Minister Employment Generation Programme (CMEGP Maharashtra)",
+      "authority": "Directorate of Industries / KVIB Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://maha-cmegp.gov.in/guidelines",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "MH-CMEGP-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "project_report_dpr",
+        "bank_sanction_letter"
+      ],
+      "snippet": "25% margin money subsidy up to Rs. 10 Lakhs for greenfield micro manufacturing enterprises in Maharashtra.",
+      "keywords": {
+        "en": [
+          "cmegp",
+          "chief minister employment",
+          "new micro unit",
+          "margin money",
+          "greenfield loan"
+        ],
+        "hi": [
+          "मुख्यमंत्री रोजगार निर्मिती",
+          "नया सूक्ष्म उद्योग",
+          "मार्जिन मनी सब्सिडी"
+        ],
+        "mr": [
+          "मुख्यमंत्री रोजगार निर्मिती कार्यक्रम",
+          "नवीन सूक्ष्म उद्योग",
+          "मार्जिन मनी अनुदान"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-CMEGP-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Chief Minister Employment Generation Programme (CMEGP Maharashtra) — Unit Eligibility",
+          "text": "Strictly for new greenfield Micro enterprises in Maharashtra with project cost / plant & machinery investment up to Rs. 50 Lakhs."
+        },
+        {
+          "clause_id": "MH-CMEGP-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Chief Minister Employment Generation Programme (CMEGP Maharashtra) — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Margin money credit-linked capital subsidy for first-generation greenfield micro manufacturing and service units in Maharashtra."
+        },
+        {
+          "clause_id": "MH-CMEGP-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Chief Minister Employment Generation Programme (CMEGP Maharashtra) — Capital Grant / Subsidy Rate",
+          "text": "25% margin money subsidy up to Rs. 10 Lakhs for greenfield micro manufacturing enterprises in Maharashtra."
+        },
+        {
+          "clause_id": "MH-CMEGP-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Chief Minister Employment Generation Programme (CMEGP Maharashtra) — Verification Checklist",
+          "text": "Applicant enterprises applying for Chief Minister Employment Generation Programme (CMEGP Maharashtra) must furnish: udyam_certificate, gstin_certificate, project_report_dpr, bank_sanction_letter. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-PSI-INT-2019",
+      "scheme_name": "Maharashtra PSI-2019 Term Loan Interest Subsidy",
+      "authority": "Directorate of Industries, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://di.maharashtra.gov.in/psi-2019-interest-subsidy",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "MH-PSI-INT-2019/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "ca_investment_cert",
+        "term_loan_sanction_letter"
+      ],
+      "snippet": "Interest subsidy equivalent to ~12% NPV of eligible machinery investment, capped at Rs. 5 Lakhs per annum.",
+      "keywords": {
+        "en": [
+          "interest subsidy",
+          "term loan interest",
+          "bank loan rebate",
+          "vidarbha interest"
+        ],
+        "hi": [
+          "ब्याज सब्सिडी",
+          "बैंक लोन ब्याज छूट",
+          "टर्म लोन अनुदान"
+        ],
+        "mr": [
+          "व्याज अनुदान",
+          "बँक कर्ज व्याज सवलत",
+          "मुदत कर्ज अनुदान"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-PSI-INT-2019/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra PSI-2019 Term Loan Interest Subsidy — Unit Eligibility",
+          "text": "Udyam-registered Micro and Small units in Maharashtra Zone C, D, or D+ with plant and machinery investment up to Rs. 100 Lakhs."
+        },
+        {
+          "clause_id": "MH-PSI-INT-2019/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra PSI-2019 Term Loan Interest Subsidy — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Interest reimbursement @ 5% p.a. on institutional term loans taken for fixed capital acquisition in backward talukas."
+        },
+        {
+          "clause_id": "MH-PSI-INT-2019/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra PSI-2019 Term Loan Interest Subsidy — Capital Grant / Subsidy Rate",
+          "text": "Interest subsidy equivalent to ~12% NPV of eligible machinery investment, capped at Rs. 5 Lakhs per annum."
+        },
+        {
+          "clause_id": "MH-PSI-INT-2019/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra PSI-2019 Term Loan Interest Subsidy — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra PSI-2019 Term Loan Interest Subsidy must furnish: udyam_certificate, gstin_certificate, ca_investment_cert, term_loan_sanction_letter. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-POWER-TARIFF-2023",
+      "scheme_name": "Maharashtra Industrial Power Tariff Reimbursement (Vidarbha & Marathwada)",
+      "authority": "Industries, Energy & Labour Dept, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://mahaindustry.gov.in/power-tariff-incentive",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "MH-POWER-TARIFF-2023/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "electricity_sanction_letter",
+        "mseb_bills"
+      ],
+      "snippet": "3-year power tariff subsidy estimated at 10% of machinery value up to Rs. 4.5 Lakhs.",
+      "keywords": {
+        "en": [
+          "electricity subsidy",
+          "power tariff",
+          "mseb bill rebate",
+          "industrial electricity"
+        ],
+        "hi": [
+          "बिजली बिल सब्सिडी",
+          "पावर टैरिफ छूट",
+          "औद्योगिक बिजली अनुदान"
+        ],
+        "mr": [
+          "वीज दर सवलत",
+          "महावितरण बिल अनुदान",
+          "औद्योगिक वीज सबसिडी"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-POWER-TARIFF-2023/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra Industrial Power Tariff Reimbursement (Vidarbha & Marathwada) — Unit Eligibility",
+          "text": "Udyam Micro/Small manufacturing enterprises in Zone D/D+ of Maharashtra with sanctioned HT/LT industrial load and investment <= Rs. 100L."
+        },
+        {
+          "clause_id": "MH-POWER-TARIFF-2023/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra Industrial Power Tariff Reimbursement (Vidarbha & Marathwada) — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Reimburses Rs. 1.00 to Rs. 1.50 per unit of industrial electricity consumed by manufacturing MSMEs in Vidarbha and Marathwada."
+        },
+        {
+          "clause_id": "MH-POWER-TARIFF-2023/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra Industrial Power Tariff Reimbursement (Vidarbha & Marathwada) — Capital Grant / Subsidy Rate",
+          "text": "3-year power tariff subsidy estimated at 10% of machinery value up to Rs. 4.5 Lakhs."
+        },
+        {
+          "clause_id": "MH-POWER-TARIFF-2023/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra Industrial Power Tariff Reimbursement (Vidarbha & Marathwada) — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra Industrial Power Tariff Reimbursement (Vidarbha & Marathwada) must furnish: udyam_certificate, gstin_certificate, electricity_sanction_letter, mseb_bills. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-AGRO-PROC-2024",
+      "scheme_name": "Maharashtra State Agri & Food Processing Capital Grant",
+      "authority": "Commissioner of Agriculture & Industries, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://krishi.maharashtra.gov.in/agro-processing-grant",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-AGRO-PROC-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "food_processing",
+        "agro_processing",
+        "cold_chain"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "fssai_license",
+        "ca_investment_cert",
+        "machinery_invoices"
+      ],
+      "snippet": "35% capital grant on plant, processing lines, and cold-chain machinery up to Rs. 50 Lakhs.",
+      "keywords": {
+        "en": [
+          "food processing",
+          "agro processing",
+          "dal mill",
+          "cold storage",
+          "spices unit"
+        ],
+        "hi": [
+          "खाद्य प्रसंस्करण सब्सिडी",
+          "दाल मिल अनुदान",
+          "कोल्ड स्टोरेज",
+          "एग्रो प्रोसेसिंग"
+        ],
+        "mr": [
+          "अन्न प्रक्रिया अनुदान",
+          "डाळ मिल सबसिडी",
+          "शीतगृह योजना",
+          "शेतीमाल प्रक्रिया"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-AGRO-PROC-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra State Agri & Food Processing Capital Grant — Unit Eligibility",
+          "text": "Udyam-registered Micro, Small, and Medium food/agro processing units in Maharashtra with investment up to Rs. 200 Lakhs."
+        },
+        {
+          "clause_id": "MH-AGRO-PROC-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra State Agri & Food Processing Capital Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Promotes value addition in dal mills, oilseed processing, spices, fruit pulp, and cold storage across Maharashtra."
+        },
+        {
+          "clause_id": "MH-AGRO-PROC-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra State Agri & Food Processing Capital Grant — Capital Grant / Subsidy Rate",
+          "text": "35% capital grant on plant, processing lines, and cold-chain machinery up to Rs. 50 Lakhs."
+        },
+        {
+          "clause_id": "MH-AGRO-PROC-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra State Agri & Food Processing Capital Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra State Agri & Food Processing Capital Grant must furnish: udyam_certificate, gstin_certificate, fssai_license, ca_investment_cert, machinery_invoices. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-TEXTILE-2023",
+      "scheme_name": "Maharashtra Integrated & Sustainable Textile Policy Capital Subsidy",
+      "authority": "Department of Cooperation, Marketing & Textiles, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://mahatextile.gov.in/textile-policy-2023-28",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-TEXTILE-2023/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "textiles",
+        "garments",
+        "powerloom",
+        "ginning"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "ca_investment_cert",
+        "machinery_invoices"
+      ],
+      "snippet": "35% capital subsidy up to Rs. 60 Lakhs for cotton-belt and Zone D/D+ textile manufacturing units.",
+      "keywords": {
+        "en": [
+          "textile subsidy",
+          "powerloom modernization",
+          "cotton ginning",
+          "garment factory"
+        ],
+        "hi": [
+          "कपड़ा उद्योग सब्सिडी",
+          "पावरलूम अनुदान",
+          "कॉटन जिनिंग",
+          "गारमेंट यूनिट"
+        ],
+        "mr": [
+          "वस्त्रोद्योग अनुदान",
+          "यंत्रमाग आधुनिकीकरण",
+          "जिनिंग प्रेसिंग",
+          "कापड उद्योग"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-TEXTILE-2023/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra Integrated & Sustainable Textile Policy Capital Subsidy — Unit Eligibility",
+          "text": "Udyam-registered textile, ginning, spinning, or garment units in Maharashtra with machinery investment up to Rs. 300 Lakhs."
+        },
+        {
+          "clause_id": "MH-TEXTILE-2023/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra Integrated & Sustainable Textile Policy Capital Subsidy — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Capital assistance for modernizing powerlooms, cotton ginning in Vidarbha, technical textiles, and garmenting."
+        },
+        {
+          "clause_id": "MH-TEXTILE-2023/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra Integrated & Sustainable Textile Policy Capital Subsidy — Capital Grant / Subsidy Rate",
+          "text": "35% capital subsidy up to Rs. 60 Lakhs for cotton-belt and Zone D/D+ textile manufacturing units."
+        },
+        {
+          "clause_id": "MH-TEXTILE-2023/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra Integrated & Sustainable Textile Policy Capital Subsidy — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra Integrated & Sustainable Textile Policy Capital Subsidy must furnish: udyam_certificate, gstin_certificate, ca_investment_cert, machinery_invoices. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-EV-AUTO-2025",
+      "scheme_name": "Maharashtra Electric Vehicle & Auto Component MSME Incentive",
+      "authority": "Directorate of Industries, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://di.maharashtra.gov.in/ev-policy-incentives",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-EV-AUTO-2025/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "ev_components",
+        "auto_ancillary",
+        "battery_pack"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "ca_investment_cert",
+        "machinery_invoices",
+        "arai_testing_cert"
+      ],
+      "snippet": "25% capital subsidy on EV tooling and testing equipment capped at Rs. 50 Lakhs.",
+      "keywords": {
+        "en": [
+          "electric vehicle",
+          "ev component",
+          "auto ancillary",
+          "battery pack",
+          "charging equipment"
+        ],
+        "hi": [
+          "इलेक्ट्रिक वाहन पार्ट्स",
+          "ऑटो कंपोनेंट सब्सिडी",
+          "बैटरी निर्माण अनुदान"
+        ],
+        "mr": [
+          "इलेक्ट्रिक वाहन सुटे भाग",
+          "ऑटो स्पेअर पार्ट्स अनुदान",
+          "बॅटरी उत्पादन"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-EV-AUTO-2025/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra Electric Vehicle & Auto Component MSME Incentive — Unit Eligibility",
+          "text": "Udyam-registered EV component, battery pack, or auto-ancillary units in Maharashtra investing up to Rs. 500 Lakhs."
+        },
+        {
+          "clause_id": "MH-EV-AUTO-2025/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra Electric Vehicle & Auto Component MSME Incentive — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Incentivizes EV motors, harnesses, BMS, chargers, and lightweight auto ancillaries in Pune, Chhatrapati Sambhajinagar, Nagpur, and Nashik."
+        },
+        {
+          "clause_id": "MH-EV-AUTO-2025/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra Electric Vehicle & Auto Component MSME Incentive — Capital Grant / Subsidy Rate",
+          "text": "25% capital subsidy on EV tooling and testing equipment capped at Rs. 50 Lakhs."
+        },
+        {
+          "clause_id": "MH-EV-AUTO-2025/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra Electric Vehicle & Auto Component MSME Incentive — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra Electric Vehicle & Auto Component MSME Incentive must furnish: udyam_certificate, gstin_certificate, ca_investment_cert, machinery_invoices, arai_testing_cert. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-IT-ESDM-2023",
+      "scheme_name": "Maharashtra IT & Electronic System Design Manufacturing (ESDM) Grant",
+      "authority": "Directorate of Industries, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://it.maharashtra.gov.in/esdm-policy-2023",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-IT-ESDM-2023/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "electronics",
+        "esdm",
+        "pcb_assembly",
+        "iot_hardware"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "ca_investment_cert",
+        "machinery_invoices"
+      ],
+      "snippet": "25% capital subsidy up to Rs. 45 Lakhs on SMT and electronic testing machinery.",
+      "keywords": {
+        "en": [
+          "electronics manufacturing",
+          "pcb assembly",
+          "esdm",
+          "iot hardware",
+          "smt line"
+        ],
+        "hi": [
+          "इलेक्ट्रॉनिक्स निर्माण",
+          "पीसीबी असेंबली सब्सिडी",
+          "हार्डवेयर अनुदान"
+        ],
+        "mr": [
+          "इलेक्ट्रॉनिक्स उत्पादन अनुदान",
+          "पीसीबी असेंब्ली",
+          "हार्डवेअर उद्योग"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-IT-ESDM-2023/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra IT & Electronic System Design Manufacturing (ESDM) Grant — Unit Eligibility",
+          "text": "Udyam Micro/Small/Medium electronics and PCB assembly enterprises in Maharashtra with investment <= Rs. 400 Lakhs."
+        },
+        {
+          "clause_id": "MH-IT-ESDM-2023/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra IT & Electronic System Design Manufacturing (ESDM) Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Supports SMT lines, PCB assembly, sensors, and industrial IoT hardware manufacturing in Maharashtra."
+        },
+        {
+          "clause_id": "MH-IT-ESDM-2023/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra IT & Electronic System Design Manufacturing (ESDM) Grant — Capital Grant / Subsidy Rate",
+          "text": "25% capital subsidy up to Rs. 45 Lakhs on SMT and electronic testing machinery."
+        },
+        {
+          "clause_id": "MH-IT-ESDM-2023/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra IT & Electronic System Design Manufacturing (ESDM) Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra IT & Electronic System Design Manufacturing (ESDM) Grant must furnish: udyam_certificate, gstin_certificate, ca_investment_cert, machinery_invoices. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-WOMEN-IND-2023",
+      "scheme_name": "Maharashtra Mahila Udyojak Special Capital Grant (Aai / Women MSME Policy)",
+      "authority": "Directorate of Industries, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://di.maharashtra.gov.in/women-entrepreneur-policy",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-WOMEN-IND-2023/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "women_led_manufacturing",
+        "garments",
+        "food_processing",
+        "handicrafts"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "women_ownership_affidavit",
+        "ca_investment_cert"
+      ],
+      "snippet": "35% capital grant up to Rs. 25 Lakhs plus @5% interest rebate for women entrepreneurs.",
+      "keywords": {
+        "en": [
+          "women entrepreneur",
+          "mahila udyojak",
+          "female founder",
+          "women msme subsidy"
+        ],
+        "hi": [
+          "महिला उद्यमी सब्सिडी",
+          "महिला उद्योग अनुदान",
+          "महिला स्टार्टअप योजना"
+        ],
+        "mr": [
+          "महिला उद्योजक अनुदान",
+          "महिला उद्योग योजना",
+          "महिला व्यवसाय सबसिडी"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-WOMEN-IND-2023/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra Mahila Udyojak Special Capital Grant (Aai / Women MSME Policy) — Unit Eligibility",
+          "text": "Udyam-registered Micro and Small women-led manufacturing enterprises in Maharashtra with plant & machinery up to Rs. 100 Lakhs."
+        },
+        {
+          "clause_id": "MH-WOMEN-IND-2023/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra Mahila Udyojak Special Capital Grant (Aai / Women MSME Policy) — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Dedicated capital grant and 100% stamp duty waiver for 100% women-owned manufacturing MSMEs in Maharashtra."
+        },
+        {
+          "clause_id": "MH-WOMEN-IND-2023/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra Mahila Udyojak Special Capital Grant (Aai / Women MSME Policy) — Capital Grant / Subsidy Rate",
+          "text": "35% capital grant up to Rs. 25 Lakhs plus @5% interest rebate for women entrepreneurs."
+        },
+        {
+          "clause_id": "MH-WOMEN-IND-2023/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra Mahila Udyojak Special Capital Grant (Aai / Women MSME Policy) — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra Mahila Udyojak Special Capital Grant (Aai / Women MSME Policy) must furnish: udyam_certificate, gstin_certificate, women_ownership_affidavit, ca_investment_cert. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-SCST-SPL-2019",
+      "scheme_name": "Dr. Babasaheb Ambedkar Special Package for SC/ST Entrepreneurs (Maharashtra)",
+      "authority": "Social Justice & Industries Dept, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://di.maharashtra.gov.in/ambedkar-special-incentive",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "MH-SCST-SPL-2019/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "sc_st_owned_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "caste_validity_certificate",
+        "ca_investment_cert"
+      ],
+      "snippet": "30% capital subsidy up to Rs. 30 Lakhs paid in 5 annual installments.",
+      "keywords": {
+        "en": [
+          "sc st entrepreneur",
+          "ambedkar incentive",
+          "dalit tribal industrial scheme",
+          "midc concession"
+        ],
+        "hi": [
+          "अनुसूचित जाति जनजाति उद्यमी",
+          "आंबेडकर विशेष पैकेज",
+          "एससी एसटी सब्सिडी"
+        ],
+        "mr": [
+          "डॉ. बाबासाहेब आंबेडकर विशेष पॅकेज",
+          "अनुसूचित जाती जमाती उद्योजक अनुदान"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-SCST-SPL-2019/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Dr. Babasaheb Ambedkar Special Package for SC/ST Entrepreneurs (Maharashtra) — Unit Eligibility",
+          "text": "100% SC/ST owned Udyam Micro/Small manufacturing enterprises in Maharashtra with investment <= Rs. 100 Lakhs."
+        },
+        {
+          "clause_id": "MH-SCST-SPL-2019/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Dr. Babasaheb Ambedkar Special Package for SC/ST Entrepreneurs (Maharashtra) — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Additional capital subsidy,MIDC plot concession, and power tariff support for SC/ST first-generation industrialists."
+        },
+        {
+          "clause_id": "MH-SCST-SPL-2019/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Dr. Babasaheb Ambedkar Special Package for SC/ST Entrepreneurs (Maharashtra) — Capital Grant / Subsidy Rate",
+          "text": "30% capital subsidy up to Rs. 30 Lakhs paid in 5 annual installments."
+        },
+        {
+          "clause_id": "MH-SCST-SPL-2019/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Dr. Babasaheb Ambedkar Special Package for SC/ST Entrepreneurs (Maharashtra) — Verification Checklist",
+          "text": "Applicant enterprises applying for Dr. Babasaheb Ambedkar Special Package for SC/ST Entrepreneurs (Maharashtra) must furnish: udyam_certificate, gstin_certificate, caste_validity_certificate, ca_investment_cert. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-ZLD-ETP-2024",
+      "scheme_name": "Maharashtra MSME Effluent Treatment & Zero Liquid Discharge (ZLD) Subsidy",
+      "authority": "MPCB & Directorate of Industries, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://mpcb.gov.in/msme-etp-zld-grant",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-ZLD-ETP-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "chemicals",
+        "pharmaceuticals",
+        "dyeing",
+        "electroplating"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "mpcb_consent_to_establish",
+        "etp_vendor_invoices"
+      ],
+      "snippet": "50% one-time capital grant on ETP/ZLD machinery capped at Rs. 25 Lakhs.",
+      "keywords": {
+        "en": [
+          "effluent treatment plant",
+          "etp subsidy",
+          "zero liquid discharge",
+          "pollution control",
+          "chemicals"
+        ],
+        "hi": [
+          "एफ्लुएंट ट्रीटमेंट प्लांट",
+          "प्रदूषण नियंत्रण सब्सिडी",
+          "केमिकल फैक्ट्री अनुदान"
+        ],
+        "mr": [
+          "सांडपाणी प्रक्रिया प्रकल्प",
+          "प्रदूषण नियंत्रण अनुदान",
+          "केमिकल उद्योग सबसिडी"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-ZLD-ETP-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra MSME Effluent Treatment & Zero Liquid Discharge (ZLD) Subsidy — Unit Eligibility",
+          "text": "Udyam-registered chemical, pharma, dyeing, or surface-coating units in Maharashtra installing MPCB-approved ETP/ZLD equipment."
+        },
+        {
+          "clause_id": "MH-ZLD-ETP-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra MSME Effluent Treatment & Zero Liquid Discharge (ZLD) Subsidy — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Co-finances Effluent Treatment Plants (ETP), scrubbers, and ZLD systems for chemical, pharma, and electroplating MSMEs."
+        },
+        {
+          "clause_id": "MH-ZLD-ETP-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra MSME Effluent Treatment & Zero Liquid Discharge (ZLD) Subsidy — Capital Grant / Subsidy Rate",
+          "text": "50% one-time capital grant on ETP/ZLD machinery capped at Rs. 25 Lakhs."
+        },
+        {
+          "clause_id": "MH-ZLD-ETP-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra MSME Effluent Treatment & Zero Liquid Discharge (ZLD) Subsidy — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra MSME Effluent Treatment & Zero Liquid Discharge (ZLD) Subsidy must furnish: udyam_certificate, gstin_certificate, mpcb_consent_to_establish, etp_vendor_invoices. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-STAMP-DUTY-2019",
+      "scheme_name": "Maharashtra PSI-2019 100% Stamp Duty Exemption for Industrial Land",
+      "authority": "Inspector General of Registration & Industries Dept, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://di.maharashtra.gov.in/stamp-duty-exemption",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "MH-STAMP-DUTY-2019/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "midc_allotment_or_sale_deed",
+        "dic_eligibility_cert"
+      ],
+      "snippet": "100% stamp duty waiver (valued at ~5% of capital outlay up to Rs. 3.5 Lakhs).",
+      "keywords": {
+        "en": [
+          "stamp duty exemption",
+          "industrial plot registration",
+          "midc land",
+          "lease deed waiver"
+        ],
+        "hi": [
+          "स्टाम्प ड्यूटी छूट",
+          "औद्योगिक जमीन रजिस्ट्री",
+          "एमआईडीसी प्लॉट"
+        ],
+        "mr": [
+          "मुद्रांक शुल्क माफी",
+          "एमआयडीसी भूखंड नोंदणी",
+          "स्टँप ड्युटी सवलत"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-STAMP-DUTY-2019/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra PSI-2019 100% Stamp Duty Exemption for Industrial Land — Unit Eligibility",
+          "text": "Udyam-registered Micro and Small manufacturing enterprises acquiring industrial land/shed in Maharashtra Zone C, D, or D+."
+        },
+        {
+          "clause_id": "MH-STAMP-DUTY-2019/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra PSI-2019 100% Stamp Duty Exemption for Industrial Land — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. 100% exemption/refund on stamp duty paid on lease, mortgage, or purchase of industrial plots/sheds in Zone C, D, and D+."
+        },
+        {
+          "clause_id": "MH-STAMP-DUTY-2019/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra PSI-2019 100% Stamp Duty Exemption for Industrial Land — Capital Grant / Subsidy Rate",
+          "text": "100% stamp duty waiver (valued at ~5% of capital outlay up to Rs. 3.5 Lakhs)."
+        },
+        {
+          "clause_id": "MH-STAMP-DUTY-2019/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra PSI-2019 100% Stamp Duty Exemption for Industrial Land — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra PSI-2019 100% Stamp Duty Exemption for Industrial Land must furnish: udyam_certificate, gstin_certificate, midc_allotment_or_sale_deed, dic_eligibility_cert. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-QUALITY-ISO-2024",
+      "scheme_name": "Maharashtra MSME Quality Certification (BIS / ISO / CE / IATF) Reimbursement",
+      "authority": "Directorate of Industries, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://di.maharashtra.gov.in/quality-certification-subsidy",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-QUALITY-ISO-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "iso_bis_certificate",
+        "certification_fee_receipt"
+      ],
+      "snippet": "75% fee reimbursement capped at Rs. 2 Lakhs (approx. 4% of micro machinery investment).",
+      "keywords": {
+        "en": [
+          "iso certification",
+          "bis license",
+          "ce marking",
+          "quality audit reimbursement"
+        ],
+        "hi": [
+          "आईएसओ सर्टिफिकेट सब्सिडी",
+          "बीआईएस लाइसेंस शुल्क वापसी",
+          "गुणवत्ता प्रमाणन"
+        ],
+        "mr": [
+          "आयएसओ प्रमाणपत्र अनुदान",
+          "बीआयएस मानक शुल्क परतावा",
+          "गुणवत्ता प्रमाणन"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-QUALITY-ISO-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra MSME Quality Certification (BIS / ISO / CE / IATF) Reimbursement — Unit Eligibility",
+          "text": "Udyam-registered Micro and Small manufacturing units in Maharashtra obtaining national or international quality certification."
+        },
+        {
+          "clause_id": "MH-QUALITY-ISO-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra MSME Quality Certification (BIS / ISO / CE / IATF) Reimbursement — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Reimburses testing and audit charges for BIS hallmarking, ISO-9001, IATF-16949, CE marking, and NABL lab validation."
+        },
+        {
+          "clause_id": "MH-QUALITY-ISO-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra MSME Quality Certification (BIS / ISO / CE / IATF) Reimbursement — Capital Grant / Subsidy Rate",
+          "text": "75% fee reimbursement capped at Rs. 2 Lakhs (approx. 4% of micro machinery investment)."
+        },
+        {
+          "clause_id": "MH-QUALITY-ISO-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra MSME Quality Certification (BIS / ISO / CE / IATF) Reimbursement — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra MSME Quality Certification (BIS / ISO / CE / IATF) Reimbursement must furnish: udyam_certificate, gstin_certificate, iso_bis_certificate, certification_fee_receipt. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-DEF-AERO-2024",
+      "scheme_name": "Maharashtra Defense & Aerospace MSME Vendor Development Grant",
+      "authority": "Maharashtra Industrial Development Corporation (MIDC)",
+      "state": "Maharashtra",
+      "source_url": "https://midcindia.org/defense-aerospace-policy",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-DEF-AERO-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "defense_manufacturing",
+        "aerospace",
+        "uav_drones"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "as9100_or_dpsus_vendor_code",
+        "ca_investment_cert"
+      ],
+      "snippet": "30% capital grant up to Rs. 75 Lakhs for AS9100/DPSU registered MSME vendors.",
+      "keywords": {
+        "en": [
+          "defense manufacturing",
+          "aerospace",
+          "drones uav",
+          "mihan nagpur",
+          "cnc aerospace"
+        ],
+        "hi": [
+          "रक्षा निर्माण सब्सिडी",
+          "एयरोस्पेस उद्योग",
+          "ड्रोन निर्माण महाराष्ट्र"
+        ],
+        "mr": [
+          "संरक्षण उत्पादन अनुदान",
+          "एरोस्पेस उद्योग",
+          "ड्रोन निर्मिती महाराष्ट्र"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-DEF-AERO-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra Defense & Aerospace MSME Vendor Development Grant — Unit Eligibility",
+          "text": "Udyam MSMEs manufacturing defense, aerospace, or drone components in Maharashtra with investment up to Rs. 500 Lakhs."
+        },
+        {
+          "clause_id": "MH-DEF-AERO-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra Defense & Aerospace MSME Vendor Development Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Supports CNC 5-axis machining, composites, avionics, and defense sub-assemblies in Nagpur MIHAN, Pune, Nashik, and Ozar."
+        },
+        {
+          "clause_id": "MH-DEF-AERO-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra Defense & Aerospace MSME Vendor Development Grant — Capital Grant / Subsidy Rate",
+          "text": "30% capital grant up to Rs. 75 Lakhs for AS9100/DPSU registered MSME vendors."
+        },
+        {
+          "clause_id": "MH-DEF-AERO-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra Defense & Aerospace MSME Vendor Development Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra Defense & Aerospace MSME Vendor Development Grant must furnish: udyam_certificate, gstin_certificate, as9100_or_dpsus_vendor_code, ca_investment_cert. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-PHARMA-GMP-2024",
+      "scheme_name": "Maharashtra WHO-GMP Upgradation Grant for Pharma & Medical Device MSMEs",
+      "authority": "FDA & Industries Dept, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://di.maharashtra.gov.in/pharma-medical-device-grant",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-PHARMA-GMP-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "pharmaceuticals",
+        "medical_devices",
+        "bulk_drugs"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "drug_manufacturing_license",
+        "ca_investment_cert"
+      ],
+      "snippet": "25% capital subsidy up to Rs. 40 Lakhs on cleanroom and analytical lab equipment.",
+      "keywords": {
+        "en": [
+          "pharma who gmp",
+          "medical devices",
+          "cleanroom upgrade",
+          "schedule m"
+        ],
+        "hi": [
+          "फार्मा सब्सिडी",
+          "मेडिकल डिवाइस अनुदान",
+          "डब्ल्यूएचओ जीएमपी"
+        ],
+        "mr": [
+          "औषध निर्माण अनुदान",
+          "मेडिकल डिव्हाइस सबसिडी",
+          "डब्ल्यूएचओ जीएमपी"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-PHARMA-GMP-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra WHO-GMP Upgradation Grant for Pharma & Medical Device MSMEs — Unit Eligibility",
+          "text": "Udyam-registered pharmaceutical and medical device units in Maharashtra with investment <= Rs. 350 Lakhs."
+        },
+        {
+          "clause_id": "MH-PHARMA-GMP-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra WHO-GMP Upgradation Grant for Pharma & Medical Device MSMEs — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Assists formulation, API, and medical device MSMEs in upgrading cleanrooms and HVAC systems to WHO-GMP / Schedule M norms."
+        },
+        {
+          "clause_id": "MH-PHARMA-GMP-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra WHO-GMP Upgradation Grant for Pharma & Medical Device MSMEs — Capital Grant / Subsidy Rate",
+          "text": "25% capital subsidy up to Rs. 40 Lakhs on cleanroom and analytical lab equipment."
+        },
+        {
+          "clause_id": "MH-PHARMA-GMP-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra WHO-GMP Upgradation Grant for Pharma & Medical Device MSMEs — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra WHO-GMP Upgradation Grant for Pharma & Medical Device MSMEs must furnish: udyam_certificate, gstin_certificate, drug_manufacturing_license, ca_investment_cert. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-EXPORT-PROMO-2024",
+      "scheme_name": "Maharashtra MSME Export Promotion & International Fair Grant",
+      "authority": "Export Commissioner, Govt. of Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://mahaindustry.gov.in/export-promotion-msme",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-EXPORT-PROMO-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "export_manufacturing",
+        "engineering_exports",
+        "handicrafts"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "iec_code_certificate",
+        "shipping_bills"
+      ],
+      "snippet": "Reimbursement up to Rs. 6 Lakhs per year (~15% equivalent on export tooling/packaging).",
+      "keywords": {
+        "en": [
+          "export subsidy",
+          "iec code",
+          "international trade fair",
+          "freight assistance"
+        ],
+        "hi": [
+          "निर्यात सब्सिडी",
+          "एक्सपोर्ट प्रोत्साहन",
+          "अंतरराष्ट्रीय व्यापार मेला"
+        ],
+        "mr": [
+          "निर्यात प्रोत्साहन अनुदान",
+          "आंतरराष्ट्रीय प्रदर्शन सवलत",
+          "एक्सपोर्ट सबसिडी"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-EXPORT-PROMO-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra MSME Export Promotion & International Fair Grant — Unit Eligibility",
+          "text": "IEC-holding Udyam Micro/Small exporters in Maharashtra in export manufacturing sectors."
+        },
+        {
+          "clause_id": "MH-EXPORT-PROMO-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra MSME Export Promotion & International Fair Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Supports stall rental at overseas trade fairs, export packaging testing, and sea/air freight subsidy for first-time exporters."
+        },
+        {
+          "clause_id": "MH-EXPORT-PROMO-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra MSME Export Promotion & International Fair Grant — Capital Grant / Subsidy Rate",
+          "text": "Reimbursement up to Rs. 6 Lakhs per year (~15% equivalent on export tooling/packaging)."
+        },
+        {
+          "clause_id": "MH-EXPORT-PROMO-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra MSME Export Promotion & International Fair Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra MSME Export Promotion & International Fair Grant must furnish: udyam_certificate, gstin_certificate, iec_code_certificate, shipping_bills. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-CIRCULAR-PLAST-2024",
+      "scheme_name": "Maharashtra Circular Economy & Biodegradable Packaging MSME Grant",
+      "authority": "Environment & Industries Dept, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://mpcb.gov.in/biodegradable-packaging-grant",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-CIRCULAR-PLAST-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "packaging",
+        "recycling",
+        "biopolymers"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "cpcb_compostable_cert",
+        "machinery_invoices"
+      ],
+      "snippet": "30% machinery conversion grant up to Rs. 20 Lakhs.",
+      "keywords": {
+        "en": [
+          "biodegradable packaging",
+          "plastic recycling",
+          "compostable bags",
+          "circular economy"
+        ],
+        "hi": [
+          "बायोडिग्रेडेबल पैकेजिंग",
+          "प्लास्टिक रीसाइक्लिंग सब्सिडी",
+          "कंपोस्टेबल बैग"
+        ],
+        "mr": [
+          "बायोडिग्रेडेबल पॅकेजिंग अनुदान",
+          "प्लास्टिक पुनर्वापर उद्योग"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-CIRCULAR-PLAST-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra Circular Economy & Biodegradable Packaging MSME Grant — Unit Eligibility",
+          "text": "Udyam Micro/Small packaging and recycling units in Maharashtra with machinery up to Rs. 120 Lakhs."
+        },
+        {
+          "clause_id": "MH-CIRCULAR-PLAST-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra Circular Economy & Biodegradable Packaging MSME Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Helps single-use plastic units transition to compostable biopolymers, moulded pulp, and EPR-compliant recycling."
+        },
+        {
+          "clause_id": "MH-CIRCULAR-PLAST-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra Circular Economy & Biodegradable Packaging MSME Grant — Capital Grant / Subsidy Rate",
+          "text": "30% machinery conversion grant up to Rs. 20 Lakhs."
+        },
+        {
+          "clause_id": "MH-CIRCULAR-PLAST-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra Circular Economy & Biodegradable Packaging MSME Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra Circular Economy & Biodegradable Packaging MSME Grant must furnish: udyam_certificate, gstin_certificate, cpcb_compostable_cert, machinery_invoices. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-MSI-CDP-2024",
+      "scheme_name": "Maharashtra State Industrial Cluster Development Programme (MSI-CDP)",
+      "authority": "Directorate of Industries, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://di.maharashtra.gov.in/msi-cdp-cluster",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-MSI-CDP-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "cluster_spv",
+        "foundry",
+        "forging"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "spv_incorporation_cert",
+        "dpr_approval"
+      ],
+      "snippet": "Up to 40% state top-up grant capped at Rs. 80 Lakhs for Common Facility Centres.",
+      "keywords": {
+        "en": [
+          "cluster development",
+          "common facility centre",
+          "foundry cluster",
+          "forging tool room"
+        ],
+        "hi": [
+          "क्लस्टर विकास योजना",
+          "कॉमन फैसिलिटी सेंटर",
+          "फाउंड्री क्लस्टर"
+        ],
+        "mr": [
+          "क्लस्टर विकास योजना",
+          "सामायिक सुविधा केंद्र",
+          "फाउंड्री उद्योग"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-MSI-CDP-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra State Industrial Cluster Development Programme (MSI-CDP) — Unit Eligibility",
+          "text": "Registered MSME Cluster SPVs, foundry, and forging consortia in Maharashtra with project machinery <= Rs. 200 Lakhs."
+        },
+        {
+          "clause_id": "MH-MSI-CDP-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra State Industrial Cluster Development Programme (MSI-CDP) — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Funds Common Facility Centres (CFCs), CAD/CAM labs, and testing tool rooms for MSME foundry and forging clusters."
+        },
+        {
+          "clause_id": "MH-MSI-CDP-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra State Industrial Cluster Development Programme (MSI-CDP) — Capital Grant / Subsidy Rate",
+          "text": "Up to 40% state top-up grant capped at Rs. 80 Lakhs for Common Facility Centres."
+        },
+        {
+          "clause_id": "MH-MSI-CDP-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra State Industrial Cluster Development Programme (MSI-CDP) — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra State Industrial Cluster Development Programme (MSI-CDP) must furnish: udyam_certificate, gstin_certificate, spv_incorporation_cert, dpr_approval. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-BAMBOO-FURN-2024",
+      "scheme_name": "Maharashtra Bamboo & Engineered Wood Processing MSME Subsidy",
+      "authority": "Maharashtra Bamboo Development Board & Industries Dept",
+      "state": "Maharashtra",
+      "source_url": "https://mbdb.maharashtra.gov.in/industrial-grant",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-BAMBOO-FURN-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "woodworking",
+        "bamboo_processing",
+        "furniture"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "machinery_invoices",
+        "ca_investment_cert"
+      ],
+      "snippet": "35% capital subsidy on bamboo treatment and CNC woodworking machinery up to Rs. 20 Lakhs.",
+      "keywords": {
+        "en": [
+          "bamboo processing",
+          "furniture unit",
+          "woodworking cnc",
+          "gadchiroli chandrapur"
+        ],
+        "hi": [
+          "बांस प्रसंस्करण सब्सिडी",
+          "फर्नीचर उद्योग अनुदान",
+          "लकड़ी मशीनरी"
+        ],
+        "mr": [
+          "बांबू प्रक्रिया उद्योग अनुदान",
+          "फर्निचर निर्मिती सबसिडी"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-BAMBOO-FURN-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra Bamboo & Engineered Wood Processing MSME Subsidy — Unit Eligibility",
+          "text": "Udyam Micro/Small bamboo and furniture manufacturing units in Maharashtra investing <= Rs. 80 Lakhs."
+        },
+        {
+          "clause_id": "MH-BAMBOO-FURN-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra Bamboo & Engineered Wood Processing MSME Subsidy — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Promotes engineered bamboo boards, modular furniture, and agro-forestry value addition in Gadchiroli, Chandrapur, and Konkan."
+        },
+        {
+          "clause_id": "MH-BAMBOO-FURN-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra Bamboo & Engineered Wood Processing MSME Subsidy — Capital Grant / Subsidy Rate",
+          "text": "35% capital subsidy on bamboo treatment and CNC woodworking machinery up to Rs. 20 Lakhs."
+        },
+        {
+          "clause_id": "MH-BAMBOO-FURN-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra Bamboo & Engineered Wood Processing MSME Subsidy — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra Bamboo & Engineered Wood Processing MSME Subsidy must furnish: udyam_certificate, gstin_certificate, machinery_invoices, ca_investment_cert. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-ENERGY-AUDIT-2024",
+      "scheme_name": "Maharashtra MEDA Industrial Energy Conservation & Boiler Retrofit Subsidy",
+      "authority": "Maharashtra Energy Development Agency (MEDA)",
+      "state": "Maharashtra",
+      "source_url": "https://www.mahaurja.com/meda/energy-conservation-msme",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "MH-ENERGY-AUDIT-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": true,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "bee_energy_audit_report",
+        "solar_vendor_quotation"
+      ],
+      "snippet": "15% capital assistance on energy-saving retrofits capped at Rs. 5 Lakhs.",
+      "keywords": {
+        "en": [
+          "energy audit",
+          "boiler retrofit",
+          "vfd drive",
+          "meda conservation"
+        ],
+        "hi": [
+          "ऊर्जा ऑडिट सब्सिडी",
+          "बॉयलर अपग्रेड",
+          "बिजली बचत उपकरण"
+        ],
+        "mr": [
+          "ऊर्जा परीक्षण अनुदान",
+          "बॉयलर सुधारणा",
+          "ऊर्जा बचत यंत्रणा"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-ENERGY-AUDIT-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra MEDA Industrial Energy Conservation & Boiler Retrofit Subsidy — Unit Eligibility",
+          "text": "Udyam Micro/Small units in Maharashtra undertaking green/solar thermal or VFD energy-saving retrofits <= Rs. 100 Lakhs."
+        },
+        {
+          "clause_id": "MH-ENERGY-AUDIT-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra MEDA Industrial Energy Conservation & Boiler Retrofit Subsidy — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Co-funds BEE-certified energy audits, VFD drives, heat pumps, and solar thermal retrofits in MSME plants."
+        },
+        {
+          "clause_id": "MH-ENERGY-AUDIT-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra MEDA Industrial Energy Conservation & Boiler Retrofit Subsidy — Capital Grant / Subsidy Rate",
+          "text": "15% capital assistance on energy-saving retrofits capped at Rs. 5 Lakhs."
+        },
+        {
+          "clause_id": "MH-ENERGY-AUDIT-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra MEDA Industrial Energy Conservation & Boiler Retrofit Subsidy — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra MEDA Industrial Energy Conservation & Boiler Retrofit Subsidy must furnish: udyam_certificate, gstin_certificate, bee_energy_audit_report, solar_vendor_quotation. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "MH-IPR-PATENT-2023",
+      "scheme_name": "Maharashtra MSME Patent, Trademark & Geographical Indication Grant",
+      "authority": "Directorate of Industries, Maharashtra",
+      "state": "Maharashtra",
+      "source_url": "https://di.maharashtra.gov.in/ipr-reimbursement",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "MH-IPR-PATENT-2023/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "patent_grant_certificate",
+        "ip_attorney_invoices"
+      ],
+      "snippet": "Up to Rs. 1.5 Lakhs for domestic patents and Rs. 5 Lakhs for international patents (~3% cap).",
+      "keywords": {
+        "en": [
+          "patent reimbursement",
+          "ipr grant",
+          "trademark filing",
+          "innovation"
+        ],
+        "hi": [
+          "पेटेंट सब्सिडी",
+          "ट्रेडमार्क शुल्क प्रतिपूर्ति",
+          "बौद्धिक संपदा अनुदान"
+        ],
+        "mr": [
+          "पेटंट नोंदणी अनुदान",
+          "ट्रेडमार्क खर्च परतावा",
+          "बौद्धिक संपदा"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "MH-IPR-PATENT-2023/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Maharashtra MSME Patent, Trademark & Geographical Indication Grant — Unit Eligibility",
+          "text": "Udyam-registered Micro and Small enterprises in Maharashtra with granted domestic or international patents."
+        },
+        {
+          "clause_id": "MH-IPR-PATENT-2023/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Maharashtra MSME Patent, Trademark & Geographical Indication Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Reimburses domestic and PCT international patent filing costs for innovative manufacturing MSMEs in Maharashtra."
+        },
+        {
+          "clause_id": "MH-IPR-PATENT-2023/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Maharashtra MSME Patent, Trademark & Geographical Indication Grant — Capital Grant / Subsidy Rate",
+          "text": "Up to Rs. 1.5 Lakhs for domestic patents and Rs. 5 Lakhs for international patents (~3% cap)."
+        },
+        {
+          "clause_id": "MH-IPR-PATENT-2023/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Maharashtra MSME Patent, Trademark & Geographical Indication Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for Maharashtra MSME Patent, Trademark & Geographical Indication Grant must furnish: udyam_certificate, gstin_certificate, patent_grant_certificate, ip_attorney_invoices. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-CLCSS-TUS",
+      "scheme_name": "Central CLCSS Technology Upgradation Subsidy",
+      "authority": "Office of DC-MSME, Ministry of MSME, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://msme.gov.in/clcss-technology-upgradation",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CLCSS-TUS/Para.5.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "ca_investment_cert",
+        "machinery_invoices"
+      ],
+      "snippet": "15% upfront capital subsidy on tooling/machinery upgrades up to Rs. 100L.",
+      "keywords": {
+        "en": [
+          "clcss",
+          "technology upgradation",
+          "central machinery subsidy",
+          "cnc tooling",
+          "engineering unit",
+          "gujarat",
+          "all india"
+        ],
+        "hi": [
+          "सीएलसीएसएस सब्सिडी",
+          "तकनीकी उन्नयन योजना",
+          "केंद्रीय मशीनरी अनुदान",
+          "इंजीनियरिंग यूनिट"
+        ],
+        "mr": [
+          "केंद्रीय तंत्रज्ञान श्रेणीसुधार अनुदान",
+          "सीएलसीएसएस योजना",
+          "मशिनरी अपग्रेड सबसिडी"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-CLCSS-TUS/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Central CLCSS Technology Upgradation Subsidy — Unit Eligibility",
+          "text": "Open pan-India (all states including Gujarat, Maharashtra, Karnataka, Tamil Nadu, UP) to Udyam-registered Micro and Small manufacturing units with plant & machinery investment up to Rs. 100 Lakhs."
+        },
+        {
+          "clause_id": "CENT-CLCSS-TUS/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Central CLCSS Technology Upgradation Subsidy — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Credit Linked Capital Subsidy & Technology Upgradation Scheme (CLCSS-TUS) facilitates induction of well-established and improved CNC, precision engineering, and automated machinery across all Indian states."
+        },
+        {
+          "clause_id": "CLCSS-TUS/Para.5.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Central CLCSS Technology Upgradation Subsidy — Capital Grant / Subsidy Rate",
+          "text": "15% upfront capital subsidy on tooling/machinery upgrades up to Rs. 100L."
+        },
+        {
+          "clause_id": "CENT-CLCSS-TUS/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Central CLCSS Technology Upgradation Subsidy — Verification Checklist",
+          "text": "Applicant enterprises applying for Central CLCSS Technology Upgradation Subsidy must furnish: udyam_certificate, ca_investment_cert, machinery_invoices. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-PMEGP-2024",
+      "scheme_name": "Prime Minister's Employment Generation Programme (PMEGP)",
+      "authority": "KVIC, Ministry of MSME, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://www.kviconline.gov.in/pmegpeportal/",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-PMEGP-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "project_report_dpr",
+        "edp_training_cert",
+        "bank_sanction_letter"
+      ],
+      "snippet": "15% to 35% (25% rural general / special category) margin money subsidy up to Rs. 12.5 Lakhs.",
+      "keywords": {
+        "en": [
+          "pmegp",
+          "kvic loan",
+          "prime minister employment",
+          "new micro manufacturing",
+          "margin money"
+        ],
+        "hi": [
+          "पीएमईजीपी योजना",
+          "प्रधानमंत्री रोजगार सृजन",
+          "केवीआईसी लोन सब्सिडी",
+          "नया उद्योग"
+        ],
+        "mr": [
+          "पंतप्रधान रोजगार निर्मिती कार्यक्रम",
+          "पीएमईजीपी अनुदान",
+          "खादी ग्रामोद्योग कर्ज"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-PMEGP-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Prime Minister's Employment Generation Programme (PMEGP) — Unit Eligibility",
+          "text": "Only new greenfield Micro units anywhere in India with total project cost / machinery investment up to Rs. 50 Lakhs."
+        },
+        {
+          "clause_id": "CENT-PMEGP-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Prime Minister's Employment Generation Programme (PMEGP) — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. National credit-linked margin money subsidy administered by KVIC for setting up new greenfield micro manufacturing enterprises."
+        },
+        {
+          "clause_id": "CENT-PMEGP-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Prime Minister's Employment Generation Programme (PMEGP) — Capital Grant / Subsidy Rate",
+          "text": "15% to 35% (25% rural general / special category) margin money subsidy up to Rs. 12.5 Lakhs."
+        },
+        {
+          "clause_id": "CENT-PMEGP-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Prime Minister's Employment Generation Programme (PMEGP) — Verification Checklist",
+          "text": "Applicant enterprises applying for Prime Minister's Employment Generation Programme (PMEGP) must furnish: udyam_certificate, project_report_dpr, edp_training_cert, bank_sanction_letter. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-CGTMSE-2024",
+      "scheme_name": "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE)",
+      "authority": "Ministry of MSME & SIDBI",
+      "state": "ALL",
+      "source_url": "https://www.cgtmse.in/scheme-guidelines",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "CENT-CGTMSE-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "cma_financial_projections",
+        "bank_application"
+      ],
+      "snippet": "Collateral-free guarantee up to 85% plus guarantee-fee concession valued at ~8% up to Rs. 4 Lakhs.",
+      "keywords": {
+        "en": [
+          "collateral free loan",
+          "cgtmse",
+          "without security bank loan",
+          "sidbi credit guarantee"
+        ],
+        "hi": [
+          "बिना गारंटी लोन",
+          "कोलैटरल फ्री ऋण",
+          "सीजीटीएमएसई योजना",
+          "बिना गिरवी कर्ज"
+        ],
+        "mr": [
+          "विनातारण कर्ज योजना",
+          "सीजीटीएमएसई हमी",
+          "विना गॅरंटी बँक कर्ज"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-CGTMSE-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) — Unit Eligibility",
+          "text": "All Udyam-registered Micro and Small manufacturing and service enterprises across India with investment <= Rs. 200 Lakhs."
+        },
+        {
+          "clause_id": "CENT-CGTMSE-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Provides collateral-free credit guarantee cover up to 85% on term loans and working capital up to Rs. 5 Crore without third-party surety."
+        },
+        {
+          "clause_id": "CENT-CGTMSE-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) — Capital Grant / Subsidy Rate",
+          "text": "Collateral-free guarantee up to 85% plus guarantee-fee concession valued at ~8% up to Rs. 4 Lakhs."
+        },
+        {
+          "clause_id": "CENT-CGTMSE-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) — Verification Checklist",
+          "text": "Applicant enterprises applying for Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) must furnish: udyam_certificate, gstin_certificate, cma_financial_projections, bank_application. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-MSME-ZED-2024",
+      "scheme_name": "MSME Sustainable (ZED — Zero Defect Zero Effect) Certification Subsidy",
+      "authority": "Quality Council of India & Ministry of MSME",
+      "state": "ALL",
+      "source_url": "https://zed.msme.gov.in/guidelines",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-MSME-ZED-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "zed_pledge_certificate",
+        "machinery_invoices"
+      ],
+      "snippet": "Up to Rs. 5 Lakhs technology & handholding grant plus 80% fee subsidy for Micro units.",
+      "keywords": {
+        "en": [
+          "zed certification",
+          "zero defect zero effect",
+          "qci subsidy",
+          "sustainable manufacturing"
+        ],
+        "hi": [
+          "जेड सर्टिफिकेशन",
+          "जीरो डिफेक्ट जीरो इफेक्ट",
+          "गुणवत्ता एवं पर्यावरण अनुदान"
+        ],
+        "mr": [
+          "झिरो डिफेक्ट झिरो इफेक्ट",
+          "झेड प्रमाणपत्र अनुदान",
+          "शाश्वत उत्पादन"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-MSME-ZED-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "MSME Sustainable (ZED — Zero Defect Zero Effect) Certification Subsidy — Unit Eligibility",
+          "text": "All Udyam-registered Micro, Small, and Medium manufacturing enterprises in India taking the ZED Pledge."
+        },
+        {
+          "clause_id": "CENT-MSME-ZED-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "MSME Sustainable (ZED — Zero Defect Zero Effect) Certification Subsidy — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. 80%/60%/50% subsidy on Bronze/Silver/Gold ZED certification plus up to Rs. 5 Lakhs handholding and zero-effect technology grant."
+        },
+        {
+          "clause_id": "CENT-MSME-ZED-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "MSME Sustainable (ZED — Zero Defect Zero Effect) Certification Subsidy — Capital Grant / Subsidy Rate",
+          "text": "Up to Rs. 5 Lakhs technology & handholding grant plus 80% fee subsidy for Micro units."
+        },
+        {
+          "clause_id": "CENT-MSME-ZED-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "MSME Sustainable (ZED — Zero Defect Zero Effect) Certification Subsidy — Verification Checklist",
+          "text": "Applicant enterprises applying for MSME Sustainable (ZED — Zero Defect Zero Effect) Certification Subsidy must furnish: udyam_certificate, zed_pledge_certificate, machinery_invoices. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-MSME-LEAN-2024",
+      "scheme_name": "MSME Competitive (LEAN) Manufacturing Consultancy Grant",
+      "authority": "Ministry of MSME, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://lean.msme.gov.in/scheme-details",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-MSME-LEAN-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "zed_pledge_certificate",
+        "lean_consultant_agreement"
+      ],
+      "snippet": "90% consultancy cost borne by GoI up to Rs. 3.24 Lakhs per unit.",
+      "keywords": {
+        "en": [
+          "lean manufacturing",
+          "kaizen 5s",
+          "shopfloor productivity",
+          "wastage reduction"
+        ],
+        "hi": [
+          "लीन मैन्युफैक्चरिंग",
+          "काइजेन उत्पादकता योजना",
+          "अपव्यय में कमी"
+        ],
+        "mr": [
+          "लीन मॅन्युफॅक्चरिंग योजना",
+          "उत्पादकता वाढ अनुदान",
+          "काइझेन ५एस"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-MSME-LEAN-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "MSME Competitive (LEAN) Manufacturing Consultancy Grant — Unit Eligibility",
+          "text": "Udyam-registered MSMEs across India implementing Basic, Intermediate, or Advanced Lean manufacturing tiers."
+        },
+        {
+          "clause_id": "CENT-MSME-LEAN-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "MSME Competitive (LEAN) Manufacturing Consultancy Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. 90% Government contribution toward 5S, Kaizen, Poka-Yoke, TPM, and shop-floor productivity consultancy."
+        },
+        {
+          "clause_id": "CENT-MSME-LEAN-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "MSME Competitive (LEAN) Manufacturing Consultancy Grant — Capital Grant / Subsidy Rate",
+          "text": "90% consultancy cost borne by GoI up to Rs. 3.24 Lakhs per unit."
+        },
+        {
+          "clause_id": "CENT-MSME-LEAN-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "MSME Competitive (LEAN) Manufacturing Consultancy Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for MSME Competitive (LEAN) Manufacturing Consultancy Grant must furnish: udyam_certificate, zed_pledge_certificate, lean_consultant_agreement. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-PMFME-2024",
+      "scheme_name": "PM Formalisation of Micro Food Processing Enterprises (PMFME)",
+      "authority": "Ministry of Food Processing Industries (MoFPI)",
+      "state": "ALL",
+      "source_url": "https://pmfme.mofpi.gov.in/",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-PMFME-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "food_processing",
+        "agro_processing",
+        "dairy",
+        "bakery",
+        "spices"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "fssai_license",
+        "project_report_dpr",
+        "bank_sanction_letter"
+      ],
+      "snippet": "35% credit-linked capital subsidy capped at Rs. 10 Lakhs per unit.",
+      "keywords": {
+        "en": [
+          "pmfme",
+          "micro food processing",
+          "odop",
+          "bakery spices pickle mill"
+        ],
+        "hi": [
+          "पीएमएफएमई योजना",
+          "सूक्ष्म खाद्य प्रसंस्करण",
+          "एक जिला एक उत्पाद",
+          "मसाला बेकरी सब्सिडी"
+        ],
+        "mr": [
+          "पीएमएफएमई अन्न प्रक्रिया",
+          "एक जिल्हा एक उत्पादन",
+          "मसाले बेकरी अनुदान"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-PMFME-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "PM Formalisation of Micro Food Processing Enterprises (PMFME) — Unit Eligibility",
+          "text": "Existing or new Micro food processing units across all states with eligible project cost <= Rs. 100 Lakhs."
+        },
+        {
+          "clause_id": "CENT-PMFME-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "PM Formalisation of Micro Food Processing Enterprises (PMFME) — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Provides 35% credit-linked capital grant under One District One Product (ODOP) for micro food processing units across India."
+        },
+        {
+          "clause_id": "CENT-PMFME-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "PM Formalisation of Micro Food Processing Enterprises (PMFME) — Capital Grant / Subsidy Rate",
+          "text": "35% credit-linked capital subsidy capped at Rs. 10 Lakhs per unit."
+        },
+        {
+          "clause_id": "CENT-PMFME-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "PM Formalisation of Micro Food Processing Enterprises (PMFME) — Verification Checklist",
+          "text": "Applicant enterprises applying for PM Formalisation of Micro Food Processing Enterprises (PMFME) must furnish: udyam_certificate, fssai_license, project_report_dpr, bank_sanction_letter. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-PM-VISHWAKARMA",
+      "scheme_name": "PM Vishwakarma Artisan & Craft Enterprise Toolkit + Credit Support",
+      "authority": "Ministry of MSME, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://pmvishwakarma.gov.in/",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "CENT-PM-VISHWAKARMA/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "traditional_crafts",
+        "carpentry",
+        "blacksmithy",
+        "pottery",
+        "tailoring"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_assist_or_udyam_certificate",
+        "artisan_skill_verification",
+        "bank_passbook"
+      ],
+      "snippet": "Rs. 15,000 toolkit grant + 8% interest subvention on Rs. 3L loan (combined benefit up to Rs. 1 Lakh).",
+      "keywords": {
+        "en": [
+          "pm vishwakarma",
+          "artisan toolkit",
+          "carpenter blacksmith tailor",
+          "5 percent loan"
+        ],
+        "hi": [
+          "पीएम विश्वकर्मा योजना",
+          "कारीगर टूलकिट अनुदान",
+          "सिलाई बढ़ई लोहार लोन"
+        ],
+        "mr": [
+          "पीएम विश्वकर्मा योजना",
+          "कारागीर टूलकिट अनुदान",
+          "सुतार लोहार शिंपी कर्ज"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-PM-VISHWAKARMA/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "PM Vishwakarma Artisan & Craft Enterprise Toolkit + Credit Support — Unit Eligibility",
+          "text": "Traditional artisans and craftspeople registered as Micro units with investment <= Rs. 10 Lakhs."
+        },
+        {
+          "clause_id": "CENT-PM-VISHWAKARMA/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "PM Vishwakarma Artisan & Craft Enterprise Toolkit + Credit Support — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Supports 18 traditional trades with Rs. 15,000 e-voucher toolkit grant and collateral-free enterprise credit at 5% concessional interest."
+        },
+        {
+          "clause_id": "CENT-PM-VISHWAKARMA/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "PM Vishwakarma Artisan & Craft Enterprise Toolkit + Credit Support — Capital Grant / Subsidy Rate",
+          "text": "Rs. 15,000 toolkit grant + 8% interest subvention on Rs. 3L loan (combined benefit up to Rs. 1 Lakh)."
+        },
+        {
+          "clause_id": "CENT-PM-VISHWAKARMA/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "PM Vishwakarma Artisan & Craft Enterprise Toolkit + Credit Support — Verification Checklist",
+          "text": "Applicant enterprises applying for PM Vishwakarma Artisan & Craft Enterprise Toolkit + Credit Support must furnish: udyam_assist_or_udyam_certificate, artisan_skill_verification, bank_passbook. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-STANDUP-INDIA",
+      "scheme_name": "Stand-Up India Greenfield Enterprise Credit & Margin Support",
+      "authority": "Department of Financial Services, Ministry of Finance & SIDBI",
+      "state": "ALL",
+      "source_url": "https://www.standupmitra.in/",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-STANDUP-INDIA/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "women_led_manufacturing",
+        "sc_st_owned_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "sc_st_or_women_ownership_proof",
+        "project_report_dpr"
+      ],
+      "snippet": "Margin money convergence up to 15% of project cost (max Rs. 15 Lakhs) reducing borrower contribution to 10%.",
+      "keywords": {
+        "en": [
+          "stand up india",
+          "women sc st greenfield loan",
+          "sidbi standup mitra"
+        ],
+        "hi": [
+          "स्टैंड अप इंडिया",
+          "महिला दलित आदिवासी नया उद्योग लोन"
+        ],
+        "mr": [
+          "स्टँड अप इंडिया योजना",
+          "महिला व मागासवर्गीय नवीन उद्योग कर्ज"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-STANDUP-INDIA/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Stand-Up India Greenfield Enterprise Credit & Margin Support — Unit Eligibility",
+          "text": "51%+ SC/ST or Women owned greenfield Micro/Small manufacturing enterprise anywhere in India investing Rs. 10L–100L."
+        },
+        {
+          "clause_id": "CENT-STANDUP-INDIA/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Stand-Up India Greenfield Enterprise Credit & Margin Support — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Facilitates composite bank loans between Rs. 10 Lakhs and Rs. 1 Crore with CGSSI guarantee and margin convergence for SC/ST or women greenfield units."
+        },
+        {
+          "clause_id": "CENT-STANDUP-INDIA/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Stand-Up India Greenfield Enterprise Credit & Margin Support — Capital Grant / Subsidy Rate",
+          "text": "Margin money convergence up to 15% of project cost (max Rs. 15 Lakhs) reducing borrower contribution to 10%."
+        },
+        {
+          "clause_id": "CENT-STANDUP-INDIA/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Stand-Up India Greenfield Enterprise Credit & Margin Support — Verification Checklist",
+          "text": "Applicant enterprises applying for Stand-Up India Greenfield Enterprise Credit & Margin Support must furnish: udyam_certificate, sc_st_or_women_ownership_proof, project_report_dpr. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-SIDBI-GREEN-4E",
+      "scheme_name": "SIDBI 4E / GIFT Green & Rooftop Solar Interest + Capital Subvention",
+      "authority": "SIDBI & Ministry of MSME",
+      "state": "ALL",
+      "source_url": "https://www.sidbi.in/en/4e-energy-efficiency",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "CENT-SIDBI-GREEN-4E/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": true,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "solar_vendor_quotation",
+        "energy_saving_assessment"
+      ],
+      "snippet": "Interest + upfront green incentive equivalent to 12% of solar/green capex capped at Rs. 7.5 Lakhs.",
+      "keywords": {
+        "en": [
+          "sidbi solar",
+          "4e energy efficiency",
+          "central green msme",
+          "solar loan subsidy"
+        ],
+        "hi": [
+          "सिडबी सोलर लोन",
+          "ऊर्जा दक्षता अनुदान",
+          "केंद्रीय हरित एमएसएमई योजना"
+        ],
+        "mr": [
+          "सिडबी सोलर कर्ज सवलत",
+          "हरित ऊर्जा कार्यक्षमता योजना"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-SIDBI-GREEN-4E/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "SIDBI 4E / GIFT Green & Rooftop Solar Interest + Capital Subvention — Unit Eligibility",
+          "text": "Udyam-registered MSMEs across India installing solar PV or energy-efficient green equipment <= Rs. 200 Lakhs."
+        },
+        {
+          "clause_id": "CENT-SIDBI-GREEN-4E/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "SIDBI 4E / GIFT Green & Rooftop Solar Interest + Capital Subvention — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Pan-India concessional green finance and interest/capital subvention for MSME rooftop solar, heat pumps, and CNC energy retrofits."
+        },
+        {
+          "clause_id": "CENT-SIDBI-GREEN-4E/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "SIDBI 4E / GIFT Green & Rooftop Solar Interest + Capital Subvention — Capital Grant / Subsidy Rate",
+          "text": "Interest + upfront green incentive equivalent to 12% of solar/green capex capped at Rs. 7.5 Lakhs."
+        },
+        {
+          "clause_id": "CENT-SIDBI-GREEN-4E/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "SIDBI 4E / GIFT Green & Rooftop Solar Interest + Capital Subvention — Verification Checklist",
+          "text": "Applicant enterprises applying for SIDBI 4E / GIFT Green & Rooftop Solar Interest + Capital Subvention must furnish: udyam_certificate, gstin_certificate, solar_vendor_quotation, energy_saving_assessment. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-MSME-DESIGN-2024",
+      "scheme_name": "MSME Innovative (Design) Industrial Product Prototyping Grant",
+      "authority": "Ministry of MSME, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://innovative.msme.gov.in/design",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-MSME-DESIGN-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "product_design",
+        "industrial_machinery",
+        "consumer_goods"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "design_project_proposal",
+        "ca_turnover_cert"
+      ],
+      "snippet": "75% GoI grant for Micro (60% Small/Medium) capped at Rs. 4 Lakhs per design project.",
+      "keywords": {
+        "en": [
+          "msme design scheme",
+          "prototype grant",
+          "industrial product design",
+          "cad prototype"
+        ],
+        "hi": [
+          "एमएसएमई डिजाइन योजना",
+          "प्रोटोटाइप विकास अनुदान"
+        ],
+        "mr": [
+          "एमएसएमई डिझाइन प्रोटोटाइप अनुदान",
+          "नवीन उत्पादन रचना"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-MSME-DESIGN-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "MSME Innovative (Design) Industrial Product Prototyping Grant — Unit Eligibility",
+          "text": "Profitable Udyam-registered manufacturing MSMEs developing new industrial designs."
+        },
+        {
+          "clause_id": "CENT-MSME-DESIGN-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "MSME Innovative (Design) Industrial Product Prototyping Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Co-funds industrial product styling, ergonomics, CAD simulation, and prototype development with NID/IIT design experts."
+        },
+        {
+          "clause_id": "CENT-MSME-DESIGN-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "MSME Innovative (Design) Industrial Product Prototyping Grant — Capital Grant / Subsidy Rate",
+          "text": "75% GoI grant for Micro (60% Small/Medium) capped at Rs. 4 Lakhs per design project."
+        },
+        {
+          "clause_id": "CENT-MSME-DESIGN-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "MSME Innovative (Design) Industrial Product Prototyping Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for MSME Innovative (Design) Industrial Product Prototyping Grant must furnish: udyam_certificate, gstin_certificate, design_project_proposal, ca_turnover_cert. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-MSME-INCUBATION",
+      "scheme_name": "MSME Innovative (Incubation) Idea-to-Prototype Grant",
+      "authority": "Ministry of MSME, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://innovative.msme.gov.in/incubation",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-MSME-INCUBATION/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "deep_tech_msme",
+        "iot_hardware",
+        "biotech",
+        "clean_tech"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "host_institute_endorsement",
+        "prototype_budget"
+      ],
+      "snippet": "85% grant for Micro units up to Rs. 15 Lakhs for prototype commercialization.",
+      "keywords": {
+        "en": [
+          "msme incubation",
+          "seed grant 15 lakhs",
+          "host institute prototype",
+          "deep tech msme"
+        ],
+        "hi": [
+          "एमएसएमई इनक्यूबेशन ग्रांट",
+          "15 लाख प्रोटोटाइप सब्सिडी",
+          "नवाचार अनुदान"
+        ],
+        "mr": [
+          "एमएसएमई इनक्युबेशन अनुदान",
+          "१५ लाख नवकल्पना निधी"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-MSME-INCUBATION/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "MSME Innovative (Incubation) Idea-to-Prototype Grant — Unit Eligibility",
+          "text": "Udyam Micro and Small deep-tech, clean-tech, or hardware enterprises partnered with an approved Host Institute."
+        },
+        {
+          "clause_id": "CENT-MSME-INCUBATION/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "MSME Innovative (Incubation) Idea-to-Prototype Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Provides up to Rs. 15 Lakhs per commercializable idea incubated through Host Institutes (IITs, NITs, Tool Rooms)."
+        },
+        {
+          "clause_id": "CENT-MSME-INCUBATION/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "MSME Innovative (Incubation) Idea-to-Prototype Grant — Capital Grant / Subsidy Rate",
+          "text": "85% grant for Micro units up to Rs. 15 Lakhs for prototype commercialization."
+        },
+        {
+          "clause_id": "CENT-MSME-INCUBATION/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "MSME Innovative (Incubation) Idea-to-Prototype Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for MSME Innovative (Incubation) Idea-to-Prototype Grant must furnish: udyam_certificate, host_institute_endorsement, prototype_budget. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-NSSH-SCST-CLCS",
+      "scheme_name": "National SC-ST Hub Special Credit Linked Capital Subsidy (25% NSSH)",
+      "authority": "NSIC & Ministry of MSME, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://www.scsthub.in/special-clcss",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-NSSH-SCST-CLCS/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "sc_st_owned_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "caste_validity_certificate",
+        "ca_investment_cert",
+        "machinery_invoices"
+      ],
+      "snippet": "25% upfront capital subsidy capped at Rs. 25 Lakhs on plant & machinery.",
+      "keywords": {
+        "en": [
+          "national sc st hub",
+          "nssh 25 percent subsidy",
+          "sc st machinery grant"
+        ],
+        "hi": [
+          "नेशनल एससी एसटी हब",
+          "25 प्रतिशत मशीनरी सब्सिडी",
+          "अनुसूचित जाति उद्यमी"
+        ],
+        "mr": [
+          "नॅशनल एससी एसटी हब",
+          "२५ टक्के यंत्रसामग्री अनुदान"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-NSSH-SCST-CLCS/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "National SC-ST Hub Special Credit Linked Capital Subsidy (25% NSSH) — Unit Eligibility",
+          "text": "SC/ST owned Udyam Micro and Small manufacturing units across India with machinery investment <= Rs. 100 Lakhs."
+        },
+        {
+          "clause_id": "CENT-NSSH-SCST-CLCS/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "National SC-ST Hub Special Credit Linked Capital Subsidy (25% NSSH) — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Provides 25% upfront capital subsidy on institutional credit for plant and machinery purchase by SC/ST MSEs nationwide."
+        },
+        {
+          "clause_id": "CENT-NSSH-SCST-CLCS/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "National SC-ST Hub Special Credit Linked Capital Subsidy (25% NSSH) — Capital Grant / Subsidy Rate",
+          "text": "25% upfront capital subsidy capped at Rs. 25 Lakhs on plant & machinery."
+        },
+        {
+          "clause_id": "CENT-NSSH-SCST-CLCS/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "National SC-ST Hub Special Credit Linked Capital Subsidy (25% NSSH) — Verification Checklist",
+          "text": "Applicant enterprises applying for National SC-ST Hub Special Credit Linked Capital Subsidy (25% NSSH) must furnish: udyam_certificate, caste_validity_certificate, ca_investment_cert, machinery_invoices. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-SFURTI-CLUSTER",
+      "scheme_name": "Scheme of Fund for Regeneration of Traditional Industries (SFURTI)",
+      "authority": "Ministry of MSME, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://sfurti.msme.gov.in/",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-SFURTI-CLUSTER/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "traditional_crafts",
+        "handloom",
+        "khadi",
+        "honey_beekeeping",
+        "bamboo_processing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "cluster_spv_registration",
+        "nodal_agency_dpr"
+      ],
+      "snippet": "90% GoI grant for hard interventions capped at Rs. 25 Lakhs per mini-cluster module.",
+      "keywords": {
+        "en": [
+          "sfurti",
+          "traditional cluster",
+          "khadi handloom bamboo honey",
+          "artisan cfc"
+        ],
+        "hi": [
+          "स्फूर्ति योजना",
+          "पारंपरिक उद्योग क्लस्टर",
+          "खादी बांस शहद अनुदान"
+        ],
+        "mr": [
+          "स्फूर्ती पारंपरिक उद्योग योजना",
+          "खादी हातमाग बांबू क्लस्टर"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-SFURTI-CLUSTER/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Scheme of Fund for Regeneration of Traditional Industries (SFURTI) — Unit Eligibility",
+          "text": "Traditional artisan Micro clusters / SPVs anywhere in India with hard intervention machinery <= Rs. 150 Lakhs."
+        },
+        {
+          "clause_id": "CENT-SFURTI-CLUSTER/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Scheme of Fund for Regeneration of Traditional Industries (SFURTI) — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Organizes traditional artisans and rural micro clusters (khadi, coir, bamboo, honey, handloom) with common processing centres."
+        },
+        {
+          "clause_id": "CENT-SFURTI-CLUSTER/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Scheme of Fund for Regeneration of Traditional Industries (SFURTI) — Capital Grant / Subsidy Rate",
+          "text": "90% GoI grant for hard interventions capped at Rs. 25 Lakhs per mini-cluster module."
+        },
+        {
+          "clause_id": "CENT-SFURTI-CLUSTER/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Scheme of Fund for Regeneration of Traditional Industries (SFURTI) — Verification Checklist",
+          "text": "Applicant enterprises applying for Scheme of Fund for Regeneration of Traditional Industries (SFURTI) must furnish: udyam_certificate, cluster_spv_registration, nodal_agency_dpr. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-COIR-UDYAMI",
+      "scheme_name": "Coir Vikas Yojana — Coir Udyami Capital Subsidy",
+      "authority": "Coir Board, Ministry of MSME",
+      "state": "ALL",
+      "source_url": "https://coirboard.gov.in/coir-udyami-yojana",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-COIR-UDYAMI/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "coir_fiber"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "coir_board_training_cert",
+        "machinery_quotation"
+      ],
+      "snippet": "40% GoI capital subsidy up to Rs. 4 Lakhs on Rs. 10 Lakhs project cost.",
+      "keywords": {
+        "en": [
+          "coir udyami",
+          "coconut fiber machinery",
+          "coir pith block",
+          "coir board"
+        ],
+        "hi": [
+          "कॉयर उद्यमी योजना",
+          "नारियल रेशा उद्योग सब्सिडी"
+        ],
+        "mr": [
+          "काथ्या उद्योग अनुदान",
+          "कॉयर उद्यमी योजना"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-COIR-UDYAMI/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Coir Vikas Yojana — Coir Udyami Capital Subsidy — Unit Eligibility",
+          "text": "Udyam Micro coir fiber and coir pith enterprises in India with project cost <= Rs. 10 Lakhs."
+        },
+        {
+          "clause_id": "CENT-COIR-UDYAMI/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Coir Vikas Yojana — Coir Udyami Capital Subsidy — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Credit-linked 40% subsidy for setting up coir defibering, spinning, pith block, and coir geotextile units."
+        },
+        {
+          "clause_id": "CENT-COIR-UDYAMI/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Coir Vikas Yojana — Coir Udyami Capital Subsidy — Capital Grant / Subsidy Rate",
+          "text": "40% GoI capital subsidy up to Rs. 4 Lakhs on Rs. 10 Lakhs project cost."
+        },
+        {
+          "clause_id": "CENT-COIR-UDYAMI/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Coir Vikas Yojana — Coir Udyami Capital Subsidy — Verification Checklist",
+          "text": "Applicant enterprises applying for Coir Vikas Yojana — Coir Udyami Capital Subsidy must furnish: udyam_certificate, coir_board_training_cert, machinery_quotation. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-MSME-IC-EXPORT",
+      "scheme_name": "Ministry of MSME International Cooperation (IC) Export Market Grant",
+      "authority": "International Cooperation Division, Ministry of MSME",
+      "state": "ALL",
+      "source_url": "https://ic.msme.gov.in/",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-MSME-IC-EXPORT/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "export_manufacturing",
+        "engineering_exports"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "iec_code_certificate",
+        "gstin_certificate",
+        "expo_invoice"
+      ],
+      "snippet": "Up to Rs. 5 Lakhs reimbursement per international exhibition and export certification.",
+      "keywords": {
+        "en": [
+          "international cooperation scheme",
+          "overseas exhibition grant",
+          "first time exporter msme"
+        ],
+        "hi": [
+          "अंतरराष्ट्रीय सहयोग योजना",
+          "विदेश प्रदर्शनी अनुदान",
+          "एमएसएमई एक्सपोर्ट"
+        ],
+        "mr": [
+          "आंतरराष्ट्रीय सहकार्य योजना",
+          "परदेशी व्यापार मेळावा अनुदान"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-MSME-IC-EXPORT/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Ministry of MSME International Cooperation (IC) Export Market Grant — Unit Eligibility",
+          "text": "Udyam Micro/Small export manufacturing enterprises holding a valid DGFT Importer-Exporter Code (IEC)."
+        },
+        {
+          "clause_id": "CENT-MSME-IC-EXPORT/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Ministry of MSME International Cooperation (IC) Export Market Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Reimburses airfare, space rent, freight, and international mandatory product testing for first-time MSME exporters."
+        },
+        {
+          "clause_id": "CENT-MSME-IC-EXPORT/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Ministry of MSME International Cooperation (IC) Export Market Grant — Capital Grant / Subsidy Rate",
+          "text": "Up to Rs. 5 Lakhs reimbursement per international exhibition and export certification."
+        },
+        {
+          "clause_id": "CENT-MSME-IC-EXPORT/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Ministry of MSME International Cooperation (IC) Export Market Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for Ministry of MSME International Cooperation (IC) Export Market Grant must furnish: udyam_certificate, iec_code_certificate, gstin_certificate, expo_invoice. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-ASPIRE-AGRO",
+      "scheme_name": "ASPIRE — Scheme for Promotion of Innovation, Rural Industries & Entrepreneurship",
+      "authority": "Ministry of MSME, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://aspire.msme.gov.in/",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-ASPIRE-AGRO/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "agro_processing",
+        "rural_tech"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "livelihood_incubator_approval",
+        "machinery_invoices"
+      ],
+      "snippet": "50% machinery grant up to Rs. 20 Lakhs for rural agro-innovation units.",
+      "keywords": {
+        "en": [
+          "aspire scheme",
+          "rural agro industry",
+          "livelihood business incubator"
+        ],
+        "hi": [
+          "एस्पायर योजना",
+          "ग्रामीण कृषि उद्योग सब्सिडी",
+          "आजीविका इनक्यूबेटर"
+        ],
+        "mr": [
+          "अस्पायर ग्रामीण कृषी उद्योग योजना",
+          "ग्रामीण उद्योजकता अनुदान"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-ASPIRE-AGRO/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "ASPIRE — Scheme for Promotion of Innovation, Rural Industries & Entrepreneurship — Unit Eligibility",
+          "text": "Udyam Micro and Small rural agro-processing and livelihood tech units with machinery <= Rs. 100 Lakhs."
+        },
+        {
+          "clause_id": "CENT-ASPIRE-AGRO/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "ASPIRE — Scheme for Promotion of Innovation, Rural Industries & Entrepreneurship — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. Sets up Livelihood Business Incubators (LBI) and supports rural agro-tech micro-enterprises with plant & machinery grants."
+        },
+        {
+          "clause_id": "CENT-ASPIRE-AGRO/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "ASPIRE — Scheme for Promotion of Innovation, Rural Industries & Entrepreneurship — Capital Grant / Subsidy Rate",
+          "text": "50% machinery grant up to Rs. 20 Lakhs for rural agro-innovation units."
+        },
+        {
+          "clause_id": "CENT-ASPIRE-AGRO/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "ASPIRE — Scheme for Promotion of Innovation, Rural Industries & Entrepreneurship — Verification Checklist",
+          "text": "Applicant enterprises applying for ASPIRE — Scheme for Promotion of Innovation, Rural Industries & Entrepreneurship must furnish: udyam_certificate, livelihood_incubator_approval, machinery_invoices. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-PMS-BARCODE",
+      "scheme_name": "MSME Procurement & Marketing Support (PMS) — Barcode, GeM & Packaging Grant",
+      "authority": "Office of DC-MSME, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://my.msme.gov.in/MyMsme/Reg/Home.aspx",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-PMS-BARCODE/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "gs1_barcode_receipt"
+      ],
+      "snippet": "80% fee reimbursement on GS1 barcodes & trade stalls up to Rs. 1.5 Lakhs.",
+      "keywords": {
+        "en": [
+          "gs1 barcode subsidy",
+          "procurement marketing support",
+          "domestic trade fair",
+          "packaging grant"
+        ],
+        "hi": [
+          "बारकोड सब्सिडी",
+          "विपणन सहायता योजना",
+          "व्यापार मेला स्टॉल छूट"
+        ],
+        "mr": [
+          "जीएस१ बारकोड अनुदान",
+          "विपणन सहाय्य योजना"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-PMS-BARCODE/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "MSME Procurement & Marketing Support (PMS) — Barcode, GeM & Packaging Grant — Unit Eligibility",
+          "text": "All Udyam-registered Micro and Small manufacturing enterprises across India with investment <= Rs. 100 Lakhs."
+        },
+        {
+          "clause_id": "CENT-PMS-BARCODE/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "MSME Procurement & Marketing Support (PMS) — Barcode, GeM & Packaging Grant — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. 80% reimbursement on GS1 barcode registration, modern packaging upgradation, and domestic trade fair stalls."
+        },
+        {
+          "clause_id": "CENT-PMS-BARCODE/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "MSME Procurement & Marketing Support (PMS) — Barcode, GeM & Packaging Grant — Capital Grant / Subsidy Rate",
+          "text": "80% fee reimbursement on GS1 barcodes & trade stalls up to Rs. 1.5 Lakhs."
+        },
+        {
+          "clause_id": "CENT-PMS-BARCODE/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "MSME Procurement & Marketing Support (PMS) — Barcode, GeM & Packaging Grant — Verification Checklist",
+          "text": "Applicant enterprises applying for MSME Procurement & Marketing Support (PMS) — Barcode, GeM & Packaging Grant must furnish: udyam_certificate, gstin_certificate, gs1_barcode_receipt. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-MEDTECH-MDMS",
+      "scheme_name": "Strengthening of Medical Device Industry (MDA) — Marginal Investment MSME Scheme",
+      "authority": "Department of Pharmaceuticals, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://pharmaceuticals.gov.in/schemes/medical-devices",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "CENT-MEDTECH-MDMS/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "medical_devices",
+        "diagnostics"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "cdsco_md_license",
+        "ca_investment_cert"
+      ],
+      "snippet": "20% one-time marginal investment subsidy capped at Rs. 50 Lakhs.",
+      "keywords": {
+        "en": [
+          "medical device central grant",
+          "cdsco diagnostic",
+          "surgical implants msme"
+        ],
+        "hi": [
+          "मेडिकल डिवाइस केंद्रीय अनुदान",
+          "डायग्नोस्टिक किट निर्माण सब्सिडी"
+        ],
+        "mr": [
+          "वैद्यकीय उपकरणे केंद्रीय अनुदान",
+          "डायग्नोस्टिक किट उत्पादन"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-MEDTECH-MDMS/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Strengthening of Medical Device Industry (MDA) — Marginal Investment MSME Scheme — Unit Eligibility",
+          "text": "CDSCO-licensed Udyam MSMEs manufacturing medical devices or IVD kits anywhere in India <= Rs. 300 Lakhs."
+        },
+        {
+          "clause_id": "CENT-MEDTECH-MDMS/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Strengthening of Medical Device Industry (MDA) — Marginal Investment MSME Scheme — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Reduces import dependence in consumables, implants, and IVD diagnostic reagents through marginal capital grants."
+        },
+        {
+          "clause_id": "CENT-MEDTECH-MDMS/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Strengthening of Medical Device Industry (MDA) — Marginal Investment MSME Scheme — Capital Grant / Subsidy Rate",
+          "text": "20% one-time marginal investment subsidy capped at Rs. 50 Lakhs."
+        },
+        {
+          "clause_id": "CENT-MEDTECH-MDMS/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Strengthening of Medical Device Industry (MDA) — Marginal Investment MSME Scheme — Verification Checklist",
+          "text": "Applicant enterprises applying for Strengthening of Medical Device Industry (MDA) — Marginal Investment MSME Scheme must furnish: udyam_certificate, gstin_certificate, cdsco_md_license, ca_investment_cert. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-TREDS-WC-2024",
+      "scheme_name": "Central TReDS Bill Discounting & Working Capital Fee Waiver",
+      "authority": "Ministry of MSME & RBI TReDS Platforms",
+      "state": "ALL",
+      "source_url": "https://msme.gov.in/treds-bill-discounting",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2028-03-31",
+      "primary_clause_id": "CENT-TREDS-WC-2024/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "all_manufacturing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "cancelled_cheque"
+      ],
+      "snippet": "100% onboarding waiver + factoring fee support up to Rs. 1 Lakh (~2% cap).",
+      "keywords": {
+        "en": [
+          "treds invoice discounting",
+          "receivables financing",
+          "rxil m1xchange",
+          "working capital"
+        ],
+        "hi": [
+          "ट्रेड्स बिल डिस्काउंटिंग",
+          "बकाया भुगतान फाइनेंसिंग",
+          "वर्किंग कैपिटल"
+        ],
+        "mr": [
+          "ट्रेड्स बिल डिस्काउंटिंग",
+          "खेळते भांडवल सवलत"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-TREDS-WC-2024/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Central TReDS Bill Discounting & Working Capital Fee Waiver — Unit Eligibility",
+          "text": "Udyam-registered Micro and Small vendor enterprises across India discounting corporate/PSU receivables."
+        },
+        {
+          "clause_id": "CENT-TREDS-WC-2024/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Central TReDS Bill Discounting & Working Capital Fee Waiver — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2028-03-31. Waives onboarding fees and subsidizes invoice discounting platform charges on RXIL, M1xchange, and Invoicemart."
+        },
+        {
+          "clause_id": "CENT-TREDS-WC-2024/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Central TReDS Bill Discounting & Working Capital Fee Waiver — Capital Grant / Subsidy Rate",
+          "text": "100% onboarding waiver + factoring fee support up to Rs. 1 Lakh (~2% cap)."
+        },
+        {
+          "clause_id": "CENT-TREDS-WC-2024/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Central TReDS Bill Discounting & Working Capital Fee Waiver — Verification Checklist",
+          "text": "Applicant enterprises applying for Central TReDS Bill Discounting & Working Capital Fee Waiver must furnish: udyam_certificate, gstin_certificate, cancelled_cheque. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    },
+    {
+      "policy_id": "CENT-AHIDF-DAIRY",
+      "scheme_name": "Animal Husbandry Infrastructure Development Fund (AHIDF) — Dairy & Feed MSME",
+      "authority": "Dept of Animal Husbandry & Dairying, Govt. of India",
+      "state": "ALL",
+      "source_url": "https://ahidf.udyamimitra.in/",
+      "is_official_source": true,
+      "collection_date": "2026-10-24",
+      "validity_date": "2027-03-31",
+      "primary_clause_id": "CENT-AHIDF-DAIRY/Ch.4/Cl.4.1",
+      "eligible_scales": [
+        "micro",
+        "small",
+        "medium"
+      ],
+      "taluka_zones": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "D+"
+      ],
+      "target_sectors": [
+        "dairy",
+        "cattle_feed",
+        "agro_processing"
+      ],
+      "requires_solar": false,
+      "required_documents": [
+        "udyam_certificate",
+        "gstin_certificate",
+        "fssai_license",
+        "project_report_dpr"
+      ],
+      "snippet": "3% interest subvention (~18% NPV of capex) capped at Rs. 35 Lakhs.",
+      "keywords": {
+        "en": [
+          "ahidf dairy",
+          "milk chilling plant",
+          "cattle feed machinery",
+          "paneer cheese processing"
+        ],
+        "hi": [
+          "डेयरी प्लांट सब्सिडी",
+          "पशु आहार फैक्ट्री लोन",
+          "दूध प्रसंस्करण योजना"
+        ],
+        "mr": [
+          "दुग्ध प्रक्रिया प्रकल्प अनुदान",
+          "पशुखाद्य निर्मिती योजना"
+        ]
+      },
+      "clauses": [
+        {
+          "clause_id": "CENT-AHIDF-DAIRY/Cl.3.1",
+          "section": "3.1 Eligibility Criteria",
+          "title": "Animal Husbandry Infrastructure Development Fund (AHIDF) — Dairy & Feed MSME — Unit Eligibility",
+          "text": "Udyam MSMEs in dairy processing or animal feed manufacturing across India with investment <= Rs. 250 Lakhs."
+        },
+        {
+          "clause_id": "CENT-AHIDF-DAIRY/Cl.3.2",
+          "section": "3.2 Policy Validity & Commencement",
+          "title": "Animal Husbandry Infrastructure Development Fund (AHIDF) — Dairy & Feed MSME — Operative Period",
+          "text": "The enterprise must hold an active Udyam Registration Certificate and record a valid commercial production / project implementation schedule on or before 2027-03-31. 3% interest subvention for 8 years plus 25% credit guarantee for milk chilling, paneer/cheese value addition, and balanced cattle feed plants."
+        },
+        {
+          "clause_id": "CENT-AHIDF-DAIRY/Ch.4/Cl.4.1",
+          "section": "4. Quantum of Assistance & Subsidy Ceiling",
+          "title": "Animal Husbandry Infrastructure Development Fund (AHIDF) — Dairy & Feed MSME — Capital Grant / Subsidy Rate",
+          "text": "3% interest subvention (~18% NPV of capex) capped at Rs. 35 Lakhs."
+        },
+        {
+          "clause_id": "CENT-AHIDF-DAIRY/Cl.5.1",
+          "section": "5. Mandatory Documentation",
+          "title": "Animal Husbandry Infrastructure Development Fund (AHIDF) — Dairy & Feed MSME — Verification Checklist",
+          "text": "Applicant enterprises applying for Animal Husbandry Infrastructure Development Fund (AHIDF) — Dairy & Feed MSME must furnish: udyam_certificate, gstin_certificate, fssai_license, project_report_dpr. Enterprise legal name and constitution must match across Udyam Registration and GSTIN certificates."
+        }
+      ]
+    }
+  ]
+}

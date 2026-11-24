@@ -1,0 +1,20 @@
+{
+  "memory_off": {
+    "follow_up_questions_needed_on_return_visit": 1,
+    "reached_draft_without_reasking_profile": false,
+    "past_application_status_resolved": false
+  },
+  "memory_on": {
+    "follow_up_questions_needed_on_return_visit": 0,
+    "reached_draft_without_reasking_profile": true,
+    "past_application_status_resolved": true,
+    "past_tracking_id": "TRK-DRAFT-MH-PSI-2019-CAP-ENT-AKOLA-MEM-01-R1",
+    "dropped_pii_fields_on_write": [
+      "aadhaar_number"
+    ]
+  },
+  "forget_me_verification": {
+    "deleted": true,
+    "found_after_forget": false
+  }
+}
