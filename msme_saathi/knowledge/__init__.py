@@ -3,6 +3,7 @@
 from msme_saathi.knowledge.doc_checker import compare_document_fields, extract_document_fields
 from msme_saathi.knowledge.hybrid_retriever import (
     CrossEncoderReranker,
+    EmbeddingDiskCache,
     HybridPolicyRetriever,
     MultilingualDenseEmbedder,
     get_default_retriever,
@@ -23,6 +24,7 @@ from msme_saathi.knowledge.rule_extractor import evaluate_extractor_against_gold
 
 __all__ = [
     "CrossEncoderReranker",
+    "EmbeddingDiskCache",
     "FlaggedSourceRecord",
     "HybridPolicyRetriever",
     "IngestionReport",

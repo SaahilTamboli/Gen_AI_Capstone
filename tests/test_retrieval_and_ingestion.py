@@ -75,7 +75,11 @@ def test_recall_at_5_improves_on_36_labelled_multilingual_queries():
     queries = [json.loads(line) for line in queries_path.read_text(encoding="utf-8").splitlines() if line.strip()]
     assert len(queries) >= 30
 
-    baseline = HybridPolicyRetriever(include_multilingual_keywords=False)
+    baseline = HybridPolicyRetriever(
+        include_multilingual_keywords=False,
+        persist_directory=None,
+        use_openrouter=False,
+    )
     improved = HybridPolicyRetriever(include_multilingual_keywords=True)
 
     base_hits = 0
@@ -122,3 +126,63 @@ def test_prose_rule_extractor_and_gold_standard_benchmark():
     bench = evaluate_extractor_against_gold()
     assert bench["gold_schemes_evaluated"] >= 15
     assert bench["condition_accuracy"] >= 0.85
+
+
+def test_persistent_chroma_collection_and_embedding_disk_cache_reuse(tmp_path: Path):
+    from msme_saathi.knowledge.hybrid_retriever import EmbeddingDiskCache, MultilingualDenseEmbedder
+
+    # 1. Persistent Chroma collection builds once and reloads from disk on second init
+    chroma_dir = tmp_path / "chroma_store"
+    r1 = HybridPolicyRetriever(persist_directory=chroma_dir, use_openrouter=False)
+    assert r1.index_loaded_from_cache is False
+    assert r1.embedding_model_id == "offline-hash-256"
+
+    r2 = HybridPolicyRetriever(persist_directory=chroma_dir, use_openrouter=False)
+    assert r2.index_loaded_from_cache is True
+
+    # 2. SQLite EmbeddingDiskCache avoids repeat OpenRouter calls for identical texts
+    cache = EmbeddingDiskCache(tmp_path / "embedding_cache.sqlite")
+    cache.put_many("qwen/qwen3-embedding-8b", {"abc": [0.25, -0.5, 0.75]})
+    loaded = cache.get_many("qwen/qwen3-embedding-8b", ["abc"])
+    assert len(loaded["abc"]) == 3
+    assert abs(loaded["abc"][0] - 0.25) < 1e-6
+    assert cache.count("qwen/qwen3-embedding-8b") == 1
+    cache.close()
+
+    # 3. Mocked OpenRouter embedder hits disk cache on second identical call
+    calls: list[list[str]] = []
+
+    embedder = MultilingualDenseEmbedder(
+        model="qwen/qwen3-embedding-8b",
+        use_openrouter=True,
+        cache_dir=tmp_path / "embed_cache_dir",
+    )
+
+    def _fake_remote(texts: list[str], api_key: str) -> list[list[float]]:
+        calls.append(list(texts))
+        embedder.api_calls += 1
+        return [[float(idx + 1), 0.5, -0.25] for idx, _ in enumerate(texts)]
+
+    embedder._call_openrouter_embeddings = _fake_remote  # type: ignore[method-assign]
+    v1 = embedder._embed_via_openrouter_cached(["solar grant", "machinery subsidy"], "fake-key")
+    v2 = embedder._embed_via_openrouter_cached(["solar grant", "machinery subsidy"], "fake-key")
+    assert v1 == v2
+    assert len(calls) == 1
+    assert embedder.api_calls == 1
+    assert embedder.cache_hits == 2
+    assert embedder.cache_misses == 2
+
+
+def test_openrouter_model_defaults_and_offline_toggle(monkeypatch):
+    from msme_saathi import config
+
+    monkeypatch.delenv("MSME_EMBEDDING_MODEL", raising=False)
+    monkeypatch.delenv("MSME_LLM_MODEL", raising=False)
+    monkeypatch.delenv("MSME_REWRITER_MODEL", raising=False)
+    assert config.get_embedding_model() == "qwen/qwen3-embedding-8b"
+    assert config.get_llm_model() == "openai/gpt-4.1-mini"
+    assert config.get_rewriter_model() == "openai/gpt-4.1-mini"
+
+    monkeypatch.setenv("MSME_USE_OPENROUTER_EMBEDDINGS", "0")
+    assert config.use_openrouter_embeddings() is False
+

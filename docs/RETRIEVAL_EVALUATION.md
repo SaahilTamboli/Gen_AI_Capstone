@@ -18,7 +18,7 @@
 
 1. **Query-Side Technique (`query_rewriter.py`):** Normalizes Devanagari numerals (`३५` -> `35`) and expands colloquial Marathi, Hindi, and English entrepreneur expressions (e.g., *"विनातारण बँक कर्ज"*, *"सोलर पॅनेल्स अनुदान"*, *"बिना गारंटी लोन"*) into statutory MSME scheme vocabulary (with optional OpenRouter LLM query expansion).
 2. **Lexical Index:** `rank_bm25.BM25Okapi` with Unicode Devanagari + Latin tokenization.
-3. **Dense Vector Index:** `chromadb` cosine collection with 256-dim multilingual word/character n-gram embeddings (or OpenRouter `baai/bge-m3` embeddings via `MSME_USE_OPENROUTER_EMBEDDINGS=1`).
+3. **Dense Vector Index:** Persistent `chromadb` cosine collection (`data/chroma/`) backed by OpenRouter multilingual **`qwen/qwen3-embedding-8b`** (4096-dim, configurable via `MSME_EMBEDDING_MODEL`) with an on-disk SQLite vector cache (`data/chroma/embedding_cache.sqlite`) and automatic offline 256-dim deterministic fallback when no API key is present.
 4. **Reciprocal Rank Fusion (RRF):** Combines BM25 and ChromaDB rankings via $\text{RRF}(d) = \sum_{r} \frac{1}{60 + \text{rank}_r(d)}$.
 5. **Cross-Encoder Reranker (`CrossEncoderReranker`):** Re-scores top-30 RRF clause candidates using multi-word domain phrase alignment, title overlap, and profile metadata (`state`, `taluka_zone`, `enterprise_scale`, `sector`), citing exact `clause_id` passages.
 

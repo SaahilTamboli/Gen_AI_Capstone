@@ -1,6 +1,8 @@
 {
   "dataset": "data/eval/labelled_queries.jsonl",
   "total_labelled_queries": 36,
+  "embedding_model": "qwen/qwen3-embedding-8b",
+  "index_loaded_from_cache": true,
   "configurations": {
     "A_bm25_english_only_baseline": {
       "num_queries": 36,

@@ -9,6 +9,7 @@ venv/
 # Secrets & environment
 .env
 .env.*
+!.env.example
 
 # Local runtime databases / checkpoints / ephemeral vector dirs
 data/*.sqlite

@@ -76,7 +76,11 @@ def evaluate_config(
 
 def main() -> None:
     queries = load_queries()
-    baseline_retriever = HybridPolicyRetriever(include_multilingual_keywords=False)
+    baseline_retriever = HybridPolicyRetriever(
+        include_multilingual_keywords=False,
+        persist_directory=None,
+        use_openrouter=False,
+    )
     full_retriever = HybridPolicyRetriever(include_multilingual_keywords=True)
 
     cfg_a = evaluate_config(
@@ -104,6 +108,8 @@ def main() -> None:
     summary = {
         "dataset": str(QUERIES_PATH.relative_to(ROOT)),
         "total_labelled_queries": len(queries),
+        "embedding_model": full_retriever.embedding_model_id,
+        "index_loaded_from_cache": full_retriever.index_loaded_from_cache,
         "configurations": {
             "A_bm25_english_only_baseline": cfg_a,
             "B_plus_multilingual_query_rewriting": cfg_b,
@@ -113,7 +119,10 @@ def main() -> None:
     }
     REPORT_JSON_PATH.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    print("=== Retrieval Recall@5 Benchmark (36 Multilingual Queries: 12 EN, 12 HI, 12 MR) ===")
+    print(
+        f"=== Retrieval Recall@5 Benchmark (36 Multilingual Queries: 12 EN, 12 HI, 12 MR) "
+        f"[Embeddings: {full_retriever.embedding_model_id}, cached_index={full_retriever.index_loaded_from_cache}] ==="
+    )
     for name, metrics in summary["configurations"].items():
         print(
             f"  {name:42s} | Recall@1={metrics['recall_at_1']:.2%} | "

@@ -2,8 +2,9 @@
 
 Implements the Capstone Guide retrieval stack:
   - Lexical index: `rank_bm25.BM25Okapi` over multilingual clause chunks + scheme keywords
-  - Vector store: `chromadb` collection with dense multilingual n-gram/concept embeddings
-    (or OpenRouter `baai/bge-m3` embeddings when `MSME_USE_OPENROUTER_EMBEDDINGS=1`)
+  - Vector store: Persistent `chromadb` collection (`data/chroma/`) backed by OpenRouter
+    multilingual embeddings (`qwen/qwen3-embedding-8b` by default) with SQLite disk caching
+    and automatic deterministic offline fallback when no API key is configured
   - Fusion: Reciprocal Rank Fusion (RRF, k=60)
   - Reranker: Cross-attention lexical + metadata alignment reranker (with optional SentenceTransformers CrossEncoder)
   - Security: Official-source allowlist enforcement (`is_official_source=True`) and scam-page flagging
@@ -11,22 +12,38 @@ Implements the Capstone Guide retrieval stack:
 
 from __future__ import annotations
 
+from array import array
 import hashlib
 import math
 import os
-import re
 from pathlib import Path
+import re
+import sqlite3
+import threading
 from typing import Any
 
 import chromadb
 from chromadb.api.types import Documents, EmbeddingFunction, Embeddings
+import httpx
 from rank_bm25 import BM25Okapi
 
+from msme_saathi.config import (
+    get_chroma_persist_dir,
+    get_embedding_model,
+    get_openrouter_api_key,
+    get_openrouter_base_url,
+    use_openrouter_embeddings,
+)
 from msme_saathi.knowledge.ingestion import DEFAULT_CORPUS_PATH, PolicyCorpusIngestor
 from msme_saathi.knowledge.models import FlaggedSourceRecord, PolicyClauseChunk
 from msme_saathi.knowledge.query_rewriter import normalize_digits, rewrite_query
 
 _TOKEN_RE = re.compile(r"[\w\u0900-\u097F]+", re.UNICODE)
+_UNSET: Any = object()
+
+
+class _OpenRouterEmbeddingError(RuntimeError):
+    """Raised internally when OpenRouter embedding inference is unavailable."""
 
 
 def tokenize_multilingual(text: str) -> list[str]:
@@ -36,35 +53,229 @@ def tokenize_multilingual(text: str) -> list[str]:
     return [t for t in tokens if len(t) > 1 or t.isdigit()]
 
 
-class MultilingualDenseEmbedder(EmbeddingFunction[Documents]):
-    """Fast, deterministic 256-dim multilingual subword + concept embedder for ChromaDB.
+def _slugify_for_collection(value: str, max_len: int = 30) -> str:
+    slug = re.sub(r"[^a-zA-Z0-9]+", "_", value).strip("_").lower()
+    return (slug or "embed")[:max_len].strip("_") or "embed"
 
-    Works 100% offline in CI and clean laptops with zero multi-GB downloads, while smoothly
-    switching to OpenRouter `baai/bge-m3` if `MSME_USE_OPENROUTER_EMBEDDINGS=1` is enabled.
+
+def _sha256_text(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+class EmbeddingDiskCache:
+    """Persistent SQLite float32 vector cache keyed by `(model, text_sha256)`.
+
+    Prevents redundant OpenRouter embedding API calls across repeated queries,
+    MCP server restarts, evaluation runs, and pytest executions.
     """
 
-    def __init__(self, dim: int = 256) -> None:
+    def __init__(self, db_path: str | Path) -> None:
+        self.db_path = Path(db_path)
+        self.db_path.parent.mkdir(parents=True, exist_ok=True)
+        self._lock = threading.Lock()
+        self._conn = sqlite3.connect(str(self.db_path), check_same_thread=False)
+        with self._lock:
+            self._conn.execute("PRAGMA journal_mode=WAL;")
+            self._conn.execute("PRAGMA busy_timeout=5000;")
+            self._conn.execute(
+                """
+                CREATE TABLE IF NOT EXISTS embedding_cache (
+                    model TEXT NOT NULL,
+                    text_sha256 TEXT NOT NULL,
+                    dim INTEGER NOT NULL,
+                    vector_blob BLOB NOT NULL,
+                    PRIMARY KEY (model, text_sha256)
+                )
+                """
+            )
+            self._conn.commit()
+
+    def get_many(self, model: str, hashes: list[str]) -> dict[str, list[float]]:
+        if not hashes:
+            return {}
+        unique_hashes = list(dict.fromkeys(hashes))
+        found: dict[str, list[float]] = {}
+        with self._lock:
+            for start in range(0, len(unique_hashes), 200):
+                batch = unique_hashes[start : start + 200]
+                placeholders = ",".join("?" for _ in batch)
+                cur = self._conn.execute(
+                    f"SELECT text_sha256, vector_blob FROM embedding_cache WHERE model = ? AND text_sha256 IN ({placeholders})",
+                    [model, *batch],
+                )
+                for text_hash, blob in cur.fetchall():
+                    vec = array("f")
+                    vec.frombytes(blob)
+                    found[text_hash] = vec.tolist()
+        return found
+
+    def put_many(self, model: str, items: dict[str, list[float]]) -> None:
+        if not items:
+            return
+        rows = []
+        for text_hash, vector in items.items():
+            buf = array("f", (float(x) for x in vector))
+            rows.append((model, text_hash, len(vector), buf.tobytes()))
+        with self._lock:
+            self._conn.executemany(
+                """
+                INSERT INTO embedding_cache (model, text_sha256, dim, vector_blob)
+                VALUES (?, ?, ?, ?)
+                ON CONFLICT(model, text_sha256) DO UPDATE SET
+                    dim = excluded.dim,
+                    vector_blob = excluded.vector_blob
+                """,
+                rows,
+            )
+            self._conn.commit()
+
+    def count(self, model: str | None = None) -> int:
+        with self._lock:
+            if model is None:
+                row = self._conn.execute("SELECT COUNT(*) FROM embedding_cache").fetchone()
+            else:
+                row = self._conn.execute(
+                    "SELECT COUNT(*) FROM embedding_cache WHERE model = ?",
+                    (model,),
+                ).fetchone()
+        return int(row[0]) if row else 0
+
+    def close(self) -> None:
+        with self._lock:
+            self._conn.close()
+
+
+class MultilingualDenseEmbedder(EmbeddingFunction[Documents]):
+    """Multilingual ChromaDB embedder powered by OpenRouter (`qwen/qwen3-embedding-8b`) with disk cache.
+
+    - When OpenRouter embeddings are enabled (`OPENROUTER_API_KEY` present and
+      `MSME_USE_OPENROUTER_EMBEDDINGS != 0`), calls OpenRouter's OpenAI-compatible
+      `/embeddings` endpoint in batches and persists vectors to `embedding_cache.sqlite`.
+    - When offline or disabled (e.g., CI without API keys), cleanly uses a fast
+      deterministic 256-dim multilingual word/character n-gram embedder.
+    """
+
+    def __init__(
+        self,
+        *,
+        model: str | None = None,
+        use_openrouter: bool | None = None,
+        cache_dir: str | Path | None = None,
+        dim: int = 256,
+        batch_size: int = 32,
+        strict_openrouter: bool = False,
+    ) -> None:
+        self.model = model or get_embedding_model()
+        self.use_openrouter = use_openrouter_embeddings() if use_openrouter is None else bool(use_openrouter)
         self.dim = dim
+        self.batch_size = max(1, int(batch_size))
+        self.strict_openrouter = strict_openrouter
+        self.cache_dir = Path(cache_dir) if cache_dir is not None else None
+        self._disk_cache = EmbeddingDiskCache(self.cache_dir / "embedding_cache.sqlite") if self.cache_dir else None
+
+        # Telemetry counters (helpful for caching verification & eval reports)
+        self.api_calls = 0
+        self.cache_hits = 0
+        self.cache_misses = 0
+        self.last_backend: str = "openrouter" if self.use_openrouter else "offline_hash"
+
+    @property
+    def active_model_id(self) -> str:
+        return self.model if self.use_openrouter else f"offline-hash-{self.dim}"
 
     @staticmethod
     def name() -> str:
-        return "msme_multilingual_dense_v1"
+        return "msme_multilingual_dense_v2"
 
     def get_config(self) -> dict[str, Any]:
-        return {"dim": self.dim}
+        return {
+            "model": self.model,
+            "dim": self.dim,
+            "use_openrouter": self.use_openrouter,
+        }
 
     @staticmethod
     def build_from_config(config: dict[str, Any]) -> "MultilingualDenseEmbedder":
-        return MultilingualDenseEmbedder(dim=int(config.get("dim", 256)))
+        return MultilingualDenseEmbedder(
+            model=str(config.get("model", get_embedding_model())),
+            dim=int(config.get("dim", 256)),
+            use_openrouter=bool(config.get("use_openrouter", False)),
+        )
 
     def __call__(self, input: Documents) -> Embeddings:
-        if os.getenv("MSME_USE_OPENROUTER_EMBEDDINGS") == "1" and os.getenv("OPENROUTER_API_KEY"):
-            remote = self._try_openrouter_bge_m3(list(input))
-            if remote is not None:
-                return remote
-        return [self._embed_single(doc) for doc in input]
+        texts = [str(doc) for doc in input]
+        if not texts:
+            return []
 
-    def _embed_single(self, text: str) -> list[float]:
+        if self.use_openrouter:
+            api_key = get_openrouter_api_key()
+            if api_key:
+                remote = self._embed_via_openrouter_cached(texts, api_key)
+                if remote is not None:
+                    self.last_backend = "openrouter"
+                    return remote
+            if self.strict_openrouter:
+                raise _OpenRouterEmbeddingError(
+                    f"OpenRouter embedding request failed for model '{self.model}'."
+                )
+
+        self.last_backend = "offline_hash"
+        return [self._embed_single_offline(doc) for doc in texts]
+
+    def _embed_via_openrouter_cached(self, texts: list[str], api_key: str) -> list[list[float]] | None:
+        hashes = [_sha256_text(t) for t in texts]
+        cached = self._disk_cache.get_many(self.model, hashes) if self._disk_cache else {}
+
+        missing_by_hash: dict[str, str] = {}
+        for text, h in zip(texts, hashes):
+            if h in cached:
+                self.cache_hits += 1
+            else:
+                self.cache_misses += 1
+                missing_by_hash.setdefault(h, text)
+
+        if missing_by_hash:
+            missing_hashes = list(missing_by_hash.keys())
+            missing_texts = [missing_by_hash[h] for h in missing_hashes]
+            fetched = self._call_openrouter_embeddings(missing_texts, api_key)
+            if fetched is None or len(fetched) != len(missing_texts):
+                return None
+            newly_cached = dict(zip(missing_hashes, fetched))
+            if self._disk_cache is not None:
+                self._disk_cache.put_many(self.model, newly_cached)
+            cached.update(newly_cached)
+
+        return [cached[h] for h in hashes]
+
+    def _call_openrouter_embeddings(self, texts: list[str], api_key: str) -> list[list[float]] | None:
+        endpoint = f"{get_openrouter_base_url()}/embeddings"
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        }
+        all_vectors: list[list[float]] = []
+        try:
+            with httpx.Client(timeout=30.0) as client:
+                for start in range(0, len(texts), self.batch_size):
+                    batch = texts[start : start + self.batch_size]
+                    resp = client.post(
+                        endpoint,
+                        headers=headers,
+                        json={"model": self.model, "input": batch},
+                    )
+                    resp.raise_for_status()
+                    payload = resp.json()
+                    data = payload.get("data")
+                    if not isinstance(data, list) or len(data) != len(batch):
+                        return None
+                    ordered = sorted(data, key=lambda item: item["index"])
+                    all_vectors.extend([float(x) for x in item["embedding"]] for item in ordered)
+                    self.api_calls += 1
+            return all_vectors
+        except Exception:
+            return None
+
+    def _embed_single_offline(self, text: str) -> list[float]:
         vec = [0.0] * self.dim
         tokens = tokenize_multilingual(text)
         # Word unigrams, bigrams, and character 4-grams capture cross-script and morphological similarity
@@ -85,23 +296,6 @@ class MultilingualDenseEmbedder(EmbeddingFunction[Documents]):
 
         norm = math.sqrt(sum(v * v for v in vec)) or 1.0
         return [v / norm for v in vec]
-
-    @staticmethod
-    def _try_openrouter_bge_m3(texts: list[str]) -> list[list[float]] | None:
-        import httpx
-
-        try:
-            resp = httpx.post(
-                "https://openrouter.ai/api/v1/embeddings",
-                headers={"Authorization": f"Bearer {os.environ['OPENROUTER_API_KEY']}"},
-                json={"model": "baai/bge-m3", "input": texts},
-                timeout=10.0,
-            )
-            resp.raise_for_status()
-            data = resp.json()["data"]
-            return [item["embedding"] for item in sorted(data, key=lambda x: x["index"])]
-        except Exception:
-            return None
 
 
 class CrossEncoderReranker:
@@ -199,9 +393,11 @@ class HybridPolicyRetriever:
     def __init__(
         self,
         corpus_path: str | Path = DEFAULT_CORPUS_PATH,
-        persist_directory: str | Path | None = None,
+        persist_directory: str | Path | None = _UNSET,
         include_untrusted_for_audit: bool = True,
         include_multilingual_keywords: bool = True,
+        use_openrouter: bool | None = None,
+        embedding_model: str | None = None,
     ) -> None:
         self.include_multilingual_keywords = include_multilingual_keywords
         self.ingestor = PolicyCorpusIngestor(
@@ -213,36 +409,97 @@ class HybridPolicyRetriever:
         self.chunks_by_id: dict[str, PolicyClauseChunk] = {c.chunk_id: c for c in self.chunks}
         self.schemes_by_id = self.ingestor.schemes_by_id
 
-        def _index_text(c: PolicyClauseChunk) -> str:
-            if self.include_multilingual_keywords:
-                return CrossEncoderReranker._chunk_searchable_text(c)
-            return f"{c.policy_id} {c.scheme_name} {c.title} {c.text} {c.snippet}"
+        index_docs = [self._index_text(c) for c in self.chunks]
 
         # 1. Build BM25 index
-        corpus_tokens = [tokenize_multilingual(_index_text(c)) for c in self.chunks]
+        corpus_tokens = [tokenize_multilingual(doc) for doc in index_docs]
         self._bm25 = BM25Okapi(corpus_tokens)
 
-        # 2. Build ChromaDB vector index
-        self._embedder = MultilingualDenseEmbedder(dim=256)
-        if persist_directory:
-            Path(persist_directory).mkdir(parents=True, exist_ok=True)
-            self._chroma_client = chromadb.PersistentClient(path=str(persist_directory))
+        # 2. Configure persistent (or ephemeral) ChromaDB client
+        if persist_directory is _UNSET:
+            resolved_dir = get_chroma_persist_dir()
+        else:
+            resolved_dir = Path(persist_directory) if persist_directory is not None else None
+        self.persist_directory: Path | None = resolved_dir
+
+        if self.persist_directory is not None:
+            self.persist_directory.mkdir(parents=True, exist_ok=True)
+            self._chroma_client = chromadb.PersistentClient(path=str(self.persist_directory))
         else:
             self._chroma_client = chromadb.EphemeralClient()
 
-        collection_name = f"msme_clauses_{len(self.chunks)}_{int(include_multilingual_keywords)}"
+        # 3. Build or reuse persistent ChromaDB vector collection (keyed by model + corpus fingerprint)
+        want_openrouter = use_openrouter_embeddings() if use_openrouter is None else bool(use_openrouter)
+        chosen_model = embedding_model or get_embedding_model()
+        self.index_loaded_from_cache = False
+
+        self._embedder = MultilingualDenseEmbedder(
+            model=chosen_model,
+            use_openrouter=want_openrouter,
+            cache_dir=self.persist_directory,
+            strict_openrouter=want_openrouter,
+        )
         try:
-            self._chroma_client.delete_collection(collection_name)
-        except Exception:
-            pass
-        self._collection = self._chroma_client.create_collection(
+            self._collection, self.index_loaded_from_cache = self._init_chroma_collection(index_docs)
+        except _OpenRouterEmbeddingError:
+            # Graceful fallback to offline deterministic collection if OpenRouter is unreachable
+            self._embedder = MultilingualDenseEmbedder(
+                model=chosen_model,
+                use_openrouter=False,
+                cache_dir=self.persist_directory,
+                strict_openrouter=False,
+            )
+            self._collection, self.index_loaded_from_cache = self._init_chroma_collection(index_docs)
+
+        self.embedding_model_id = self._embedder.active_model_id
+        self._reranker = CrossEncoderReranker()
+
+    def _index_text(self, chunk: PolicyClauseChunk) -> str:
+        if self.include_multilingual_keywords:
+            return CrossEncoderReranker._chunk_searchable_text(chunk)
+        return f"{chunk.policy_id} {chunk.scheme_name} {chunk.title} {chunk.text} {chunk.snippet}"
+
+    def _compute_corpus_fingerprint(self, index_docs: list[str]) -> str:
+        hasher = hashlib.sha256()
+        hasher.update(self._embedder.active_model_id.encode("utf-8"))
+        hasher.update(b"|kw=")
+        hasher.update(b"1" if self.include_multilingual_keywords else b"0")
+        for chunk, doc in zip(self.chunks, index_docs):
+            hasher.update(b"\n")
+            hasher.update(chunk.chunk_id.encode("utf-8"))
+            hasher.update(b":")
+            hasher.update(doc.encode("utf-8"))
+        return hasher.hexdigest()[:12]
+
+    def _init_chroma_collection(self, index_docs: list[str]) -> tuple[Any, bool]:
+        fingerprint = self._compute_corpus_fingerprint(index_docs)
+        model_slug = _slugify_for_collection(self._embedder.active_model_id, max_len=30)
+        collection_name = f"msme_{model_slug}_kw{int(self.include_multilingual_keywords)}_{fingerprint}"
+        metadata = {
+            "hnsw:space": "cosine",
+            "corpus_fingerprint": fingerprint,
+            "embedding_model": self._embedder.active_model_id,
+        }
+
+        collection = self._chroma_client.get_or_create_collection(
             name=collection_name,
             embedding_function=self._embedder,
-            metadata={"hnsw:space": "cosine"},
+            metadata=metadata,
         )
-        self._collection.add(
+        if collection.count() == len(self.chunks):
+            return collection, True
+
+        if collection.count() > 0:
+            self._chroma_client.delete_collection(collection_name)
+            collection = self._chroma_client.create_collection(
+                name=collection_name,
+                embedding_function=self._embedder,
+                metadata=metadata,
+            )
+
+        collection.add(
             ids=[c.chunk_id for c in self.chunks],
-            documents=[_index_text(c) for c in self.chunks],
+            documents=index_docs,
             metadatas=[
                 {
                     "policy_id": c.policy_id,
@@ -255,7 +512,7 @@ class HybridPolicyRetriever:
                 for c in self.chunks
             ],
         )
-        self._reranker = CrossEncoderReranker()
+        return collection, False
 
     def search_policies(
         self,
@@ -302,11 +559,14 @@ class HybridPolicyRetriever:
 
         # Dense Vector ranking + RRF fusion
         if use_hybrid_vectors:
-            n_vec = min(40, len(self.chunks))
-            vec_res = self._collection.query(query_texts=[effective_query], n_results=n_vec)
-            raw_vec_ids = vec_res["ids"][0] if vec_res and vec_res.get("ids") else []
-            vector_ids = [cid for cid in raw_vec_ids if cid in allowed_chunk_ids]
-            fused = reciprocal_rank_fusion(bm25_ids, vector_ids, k=60)
+            try:
+                n_vec = min(40, len(self.chunks))
+                vec_res = self._collection.query(query_texts=[effective_query], n_results=n_vec)
+                raw_vec_ids = vec_res["ids"][0] if vec_res and vec_res.get("ids") else []
+                vector_ids = [cid for cid in raw_vec_ids if cid in allowed_chunk_ids]
+                fused = reciprocal_rank_fusion(bm25_ids, vector_ids, k=60)
+            except Exception:
+                fused = {cid: 1.0 / (60 + rank) for rank, cid in enumerate(bm25_ids, start=1)}
         else:
             fused = {cid: 1.0 / (60 + rank) for rank, cid in enumerate(bm25_ids, start=1)}
 

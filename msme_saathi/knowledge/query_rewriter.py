@@ -7,8 +7,9 @@ statutory MSME scheme terminology, and optionally invokes an OpenRouter LLM rewr
 from __future__ import annotations
 
 import os
-import re
 import httpx
+
+from msme_saathi.config import get_openrouter_api_key, get_openrouter_base_url, get_rewriter_model
 
 _DEVANAGARI_DIGITS = str.maketrans("०१२३४५६७८९", "0123456789")
 
@@ -54,8 +55,8 @@ def rewrite_query(query: str, use_llm: bool | None = None) -> str:
             expansions.append(statutory_phrase)
 
     # Optional OpenRouter LLM query expansion when explicitly enabled
+    api_key = get_openrouter_api_key()
     should_call_llm = use_llm if use_llm is not None else (os.getenv("MSME_ENABLE_LLM_REWRITE") == "1")
-    api_key = os.getenv("OPENROUTER_API_KEY")
     if should_call_llm and api_key:
         llm_terms = _call_openrouter_rewriter(normalized, api_key)
         if llm_terms:
@@ -77,10 +78,11 @@ def _call_openrouter_rewriter(query: str, api_key: str) -> str:
         "Example: 'कारखान्यावर सोलर पॅनेल्स अनुदान' -> 'Maharashtra MSME rooftop solar PV clean energy capital subsidy MEDA'\n\n"
         f"User query data: {query}"
     )
-    model = os.getenv("MSME_REWRITER_MODEL", "openai/gpt-4.1-mini")
+    model = get_rewriter_model()
+    endpoint = f"{get_openrouter_base_url()}/chat/completions"
     try:
         resp = httpx.post(
-            "https://openrouter.ai/api/v1/chat/completions",
+            endpoint,
             headers={"Authorization": f"Bearer {api_key}"},
             json={
                 "model": model,
@@ -88,7 +90,7 @@ def _call_openrouter_rewriter(query: str, api_key: str) -> str:
                 "max_tokens": 64,
                 "messages": [{"role": "user", "content": prompt}],
             },
-            timeout=5.0,
+            timeout=10.0,
         )
         resp.raise_for_status()
         return resp.json()["choices"][0]["message"]["content"].strip()
